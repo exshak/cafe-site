@@ -4,8 +4,7 @@ const Footer = () => (
   <footer>
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
+        textAlign: `center`,
       }}
     >
       © {new Date().getFullYear()}, Built with

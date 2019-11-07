@@ -1,14 +1,13 @@
 import React from "react"
+import Contact from "../components/Contact"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Contact = () => {
-  return (
-    <Layout>
-      <SEO title="Contact" />
-      <h1>Contact</h1>
-    </Layout>
-  )
-}
+const ContactPage = () => (
+  <Layout>
+    <SEO title="Contact" />
+    <Contact />
+  </Layout>
+)
 
-export default Contact
+export default ContactPage

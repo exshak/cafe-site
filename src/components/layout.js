@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import "./bootstrap.min.css"
@@ -7,28 +8,29 @@ import Info from "./Info"
 import "./layout.css"
 import Map from "./Map"
 
-const Layout = ({ children }) => (
-  <>
-    <Header />
-    <main>{children}</main>
-    <Info />
-    <Map />
-    <Footer />
-  </>
-)
-// const data = useStaticQuery(graphql`
-//   query SiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `)
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <main>{children}</main>
+      <Info />
+      <Map />
+      <Footer />
+    </>
+  )
+}
 
 // return (
 //   <>
-//     <Header siteTitle={data.site.siteMetadata.title} />
 //     <div
 //       style={{
 //         margin: `0 auto`,

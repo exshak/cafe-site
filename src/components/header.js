@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `black`,
+      background: `white`,
       // marginBottom: `1.45rem`,
       position: `fixed`,
       top: 0,
@@ -15,8 +15,8 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
+        // margin: `0 auto`,
+        // maxWidth: 960,
         // padding: `1.45rem 1.0875rem`,
         padding: `1rem 1rem`,
       }}
@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
             fontStyle: `oblique`,
           }}
@@ -34,39 +34,63 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <div style={{ display: `flex`, float: `right` }}>
-        <h4 style={{ margin: 20 }}>
+        <h5 style={{ margin: 20 }}>
           <Link
             to="/"
             style={{
-              color: `white`,
+              color: `black`,
+              textDecoration: `none`,
+              // NOTE: uppercase nav links?
+            }}
+          >
+            Home
+          </Link>
+        </h5>
+        <h5 style={{ margin: 20 }}>
+          <Link
+            to="/menu"
+            style={{
+              color: `black`,
               textDecoration: `none`,
             }}
           >
             Menu
           </Link>
-        </h4>
-        <h4 style={{ margin: 20 }}>
+        </h5>
+        <h5 style={{ margin: 20 }}>
           <Link
             to="/about"
             style={{
-              color: `white`,
+              color: `black`,
               textDecoration: `none`,
             }}
           >
             About
           </Link>
-        </h4>
-        <h4 style={{ margin: 20 }}>
+        </h5>
+        <h5 style={{ margin: 20 }}>
           <Link
             to="/contact"
             style={{
-              color: `white`,
+              color: `black`,
               textDecoration: `none`,
             }}
           >
             Contact
           </Link>
-        </h4>
+        </h5>
+        <h5 style={{ margin: 20 }}>
+          <Link
+            // to="/contact"
+            className="snipcart-checkout"
+            style={{
+              color: `black`,
+              textDecoration: `none`,
+            }}
+          >
+            Cart
+          </Link>
+        </h5>
       </div>
     </div>
   </header>
@@ -77,7 +101,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: `Cafe Noir`,
+  siteTitle: ``,
 }
 
 export default Header

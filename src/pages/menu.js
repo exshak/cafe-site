@@ -1,13 +1,25 @@
 import React from "react"
-import Layout from "../components/layout"
+import Footer from "../components/Footer"
+import Header from "../components/header"
+import Info from "../components/Info"
 import Menu from "../components/Menu"
 import SEO from "../components/seo"
+import { Sidenav } from "../components/Sidenav"
 
 const MenuPage = ({ data }) => (
-  <Layout>
+  <>
+    <Header />
     <SEO title="Menu" />
-    <Menu items={data.menu} />
-  </Layout>
+    <Sidenav />
+    <Menu
+      items={data.menu}
+      style={{
+        left: `200`,
+      }}
+    />
+    <Info />
+    <Footer />
+  </>
 )
 
 export const query = graphql`

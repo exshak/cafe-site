@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import Image from "gatsby-image"
 import React, { Component } from "react"
 import Title from "./Title"
@@ -10,6 +11,7 @@ const getCategories = items => {
       tempHash[item.node.category] = item.node.image.fixed
       result.push([item.node.category, item.node.image.fixed])
     }
+    return
   })
   // let result = Array.from(Object.keys(tempHash)).sort((a, b) => b - a)
   // let result = Array.from(Object.entries(tempHash))
@@ -24,12 +26,11 @@ export default class Menu extends Component {
     super(props)
     this.state = {
       items: props.items.edges,
-      nodes: props.items.edges,
       categories: getCategories(props.items.edges),
     }
   }
-
   render() {
+    console.log(this.state.items)
     return (
       <div
         style={{
@@ -37,7 +38,6 @@ export default class Menu extends Component {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0px 1.0875rem 1.45rem`,
-          flexDirection: `column`,
         }}
       >
         <Title title="menu" />
@@ -65,13 +65,15 @@ export default class Menu extends Component {
                     borderRadius: `50% 50% 50% 50%`,
                   }}
                 />
-                <h1
-                  style={{
-                    margin: `20px`,
-                  }}
-                >
-                  {node[0]}
-                </h1>
+                <Link to={node[0].replace(/\W/g, "-").toLowerCase()}>
+                  <h1
+                    style={{
+                      margin: `20px`,
+                    }}
+                  >
+                    {node[0]}
+                  </h1>
+                </Link>
               </div>
             )
           })}

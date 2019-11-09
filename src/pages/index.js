@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import BackgroundSection from "../components/BackgroundSection"
 import Layout from "../components/layout"
+import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import Title from "../components/Title"
 
@@ -19,7 +20,7 @@ const IndexPage = ({ data }) => (
     <BackgroundSection />
     <Title title="holiday specials" />
     <Title title="collections" />
-    {/* <Menu items={data.menu} /> */}
+    <Menu items={data.menu} />
   </Layout>
 )
 

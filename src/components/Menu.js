@@ -6,18 +6,15 @@ import Title from "./Title"
 const getCategories = items => {
   let tempHash = {}
   let result = []
-  items.map(item => {
+  items.forEach(item => {
     if (tempHash[item.node.category] == null) {
       tempHash[item.node.category] = item.node.image.fixed
       result.push([item.node.category, item.node.image.fixed])
     }
     return
   })
-  // let result = Array.from(Object.keys(tempHash)).sort((a, b) => b - a)
-  // let result = Array.from(Object.entries(tempHash))
   let temp = result.sort()
   // NOTE: implement better sort
-  // let resultArranged = [temp[2], temp[4], temp[3], temp[0], temp[5], temp[1]]
   return temp
 }
 
@@ -30,14 +27,14 @@ export default class Menu extends Component {
     }
   }
   render() {
-    console.log(this.state.items)
     return (
       <div
         style={{
           textAlign: `center`,
-          margin: `0 auto`,
+          // margin: `0 auto`,
           maxWidth: 960,
           padding: `0px 1.0875rem 1.45rem`,
+          marginLeft: `200px`,
         }}
       >
         <Title title="menu" />
@@ -56,7 +53,6 @@ export default class Menu extends Component {
                   display: `flex`,
                   margin: `10px`,
                   width: `400px`,
-                  // justifyContent: `flex-end`,
                 }}
               >
                 <Image
@@ -65,14 +61,20 @@ export default class Menu extends Component {
                     borderRadius: `50% 50% 50% 50%`,
                   }}
                 />
-                <Link to={node[0].replace(/\W/g, "-").toLowerCase()}>
-                  <h1
+                <Link
+                  to={node[0].replace(/\W/g, "-").toLowerCase()}
+                  style={{
+                    color: `black`,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <h3
                     style={{
-                      margin: `20px`,
+                      margin: `30px 0px 0px 20px`,
                     }}
                   >
                     {node[0]}
-                  </h1>
+                  </h3>
                 </Link>
               </div>
             )

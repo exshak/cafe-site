@@ -1,7 +1,9 @@
 import React from "react"
+import Info from "./Info"
 
 const Footer = () => (
   <footer>
+    <Info />
     <div
       style={{
         textAlign: `center`,

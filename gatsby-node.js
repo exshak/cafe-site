@@ -7,14 +7,13 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const categoryTemplate = path.resolve(`src/templates/category.js`)
   const itemTemplate = path.resolve(`src/templates/item.js`)
   const result = await graphql(
     `
       query loadPagesQuery($limit: Int!) {
-        allContentfulDrinks(limit: $limit) {
+        allContentfulCafeDrinks(limit: $limit) {
           edges {
             node {
               id
@@ -44,7 +43,8 @@ exports.createPages = async ({ graphql, actions }) => {
     return
   }
 
-  const items = result.data.allContentfulDrinks.edges
+  const items = result.data.allContentfulCafeDrinks.edges
+
   items.forEach(({ node }) => {
     const original = node.category
     const slug = node.category.replace(/\W/g, "-").toLowerCase()
@@ -53,8 +53,8 @@ exports.createPages = async ({ graphql, actions }) => {
       path: slug,
       component: categoryTemplate,
       context: {
-        items,
         category: original,
+        type: node.type,
       },
     })
 
@@ -62,7 +62,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: slug + "/" + node.slug,
       component: itemTemplate,
       context: {
-        items,
         title: node.title,
       },
     })

@@ -1,36 +1,28 @@
 import React from "react"
-import Footer from "../components/Footer"
-import Header from "../components/header"
-import Info from "../components/Info"
+import Layout from "../components/layout"
 import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import { Sidenav } from "../components/Sidenav"
 
-const MenuPage = ({ data }) => (
-  <>
-    <Header />
+export default ({ data }) => (
+  <Layout>
     <SEO title="Menu" />
-    <Sidenav />
-    <Menu
-      items={data.menu}
-      style={{
-        left: `200`,
-      }}
-    />
-    <Info />
-    <Footer />
-  </>
+    <Sidenav category={data.menu} />
+    <Menu items={data.menu} />
+  </Layout>
 )
 
 export const query = graphql`
   {
-    menu: allContentfulDrinks {
+    menu: allContentfulCafeDrinks {
+      distinct(field: category)
       edges {
         node {
           id
           title
           category
           type
+          slug
           description {
             description
           }
@@ -44,26 +36,4 @@ export const query = graphql`
       }
     }
   }
-  # {
-  #   menu: allContentfulCoffeeItem {
-  #     edges {
-  #       node {
-  #         id
-  #         title
-  #         description {
-  #           description
-  #         }
-  #         price
-  #         category
-  #         image {
-  #           fixed(width: 50, height: 50) {
-  #             ...GatsbyContentfulFixed
-  #           }
-  #         }
-  #       }
-  #     }
-  #   }
-  # }
 `
-
-export default MenuPage

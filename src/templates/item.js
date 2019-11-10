@@ -4,12 +4,11 @@ import Layout from "../components/layout"
 import Title from "../components/Title"
 
 export default ({ data, pageContext }) => {
-  const { node } = data.allContentfulDrinks.edges[0]
+  const { node } = data.allContentfulCafeDrinks.edges[0]
   // const { items } = pageContext
-  console.log(node)
   return (
     <Layout>
-      <Title title={node.title} />
+      <Title title={node.type} />
       <div
         style={{
           display: `flex`,
@@ -48,7 +47,7 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query($title: String!) {
-    allContentfulDrinks(filter: { title: { eq: $title } }) {
+    allContentfulCafeDrinks(filter: { title: { eq: $title } }) {
       edges {
         node {
           id

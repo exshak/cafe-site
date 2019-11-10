@@ -40,7 +40,6 @@ const Header = ({ siteTitle }) => (
             style={{
               color: `black`,
               textDecoration: `none`,
-              // NOTE: uppercase nav links?
             }}
           >
             Home

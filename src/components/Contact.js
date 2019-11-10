@@ -8,7 +8,6 @@ export default function Contact() {
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form action="https://formspree.io/mzbplopa" method="POST">
-            {/* name */}
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -19,8 +18,6 @@ export default function Contact() {
                 placeholder="john smith"
               />
             </div>
-            {/* name */}
-            {/* email */}
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -31,8 +28,6 @@ export default function Contact() {
                 placeholder="email@email.com"
               />
             </div>
-            {/* email */}
-            {/* description */}
             <div className="form-group">
               <label htmlFor="description">Description</label>
               <textarea
@@ -43,7 +38,6 @@ export default function Contact() {
                 placeholder="your description here....."
               />
             </div>
-            {/* email */}
             <button
               type="submit"
               className="btn btn-yellow btn-block text-capitalize mt-5"

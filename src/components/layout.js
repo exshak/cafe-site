@@ -4,9 +4,7 @@ import React from "react"
 import "./bootstrap.min.css"
 import Footer from "./Footer"
 import Header from "./header"
-import Info from "./Info"
 import "./layout.css"
-import Map from "./Map"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,8 +20,6 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Info />
-      <Map />
       <Footer />
     </>
   )

@@ -1,23 +1,29 @@
 import React from "react"
 
-export const Sidenav = () => {
+export const Sidenav = props => {
   return (
     <div
       style={{
         height: `100%`,
-        width: `160px`,
+        width: `300px`,
         position: `fixed`,
         zIndex: 1,
         top: 200,
         left: 0,
         overflowX: `hidden`,
-        paddingTop: `20px`,
+        paddingLeft: `100px`,
       }}
     >
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
+      <ul
+        style={{
+          listStyleType: `none`,
+        }}
+      >
+        <h4>Drinks</h4>
+        {props.category.distinct.map(node => {
+          return <li>{node}</li>
+        })}
+      </ul>
     </div>
   )
 }

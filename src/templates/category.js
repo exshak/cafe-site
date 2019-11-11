@@ -1,5 +1,7 @@
+import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
+import { Sidenav } from "../components/Sidenav"
 import Title from "../components/Title"
 import Type from "../components/Type"
 
@@ -24,6 +26,7 @@ export default ({ data, pageContext, path }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0px 1.0875rem 1.45rem`,
+          marginLeft: `20%`,
         }}
       >
         <Title title={pageContext.category} />
@@ -48,6 +51,7 @@ export default ({ data, pageContext, path }) => {
           )
         })}
       </div>
+      <Sidenav category={drinks} />
     </Layout>
     // {/* <main>
     //   <div

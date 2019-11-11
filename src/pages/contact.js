@@ -7,7 +7,8 @@ import SEO from "../components/seo"
 export default () => (
   <Layout>
     <SEO title="Contact" />
-    <Contact />
     <Map />
+    {/* <Banner /> */}
+    <Contact />
   </Layout>
 )

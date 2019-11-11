@@ -31,14 +31,13 @@ export default class Menu extends Component {
       <div
         style={{
           textAlign: `center`,
-          // margin: `0 auto`,
+          margin: `0 auto`,
           maxWidth: 960,
           padding: `0px 1.0875rem 1.45rem`,
-          marginLeft: `200px`,
+          marginLeft: `20%`,
         }}
       >
         <Title title="menu" />
-        <h1>Drinks</h1>
         <hr />
         <div
           style={{

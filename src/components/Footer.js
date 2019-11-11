@@ -2,9 +2,15 @@ import React from "react"
 import Info from "./Info"
 
 const Footer = () => (
-  <footer>
+  <footer
+    className="mx-auto py-5"
+    style={{
+      maxWidth: `960px`,
+    }}
+  >
     <Info />
     <div
+      className="pt-5"
       style={{
         textAlign: `center`,
       }}

@@ -4,6 +4,8 @@ import { Banner } from "../components/BannerA"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+// NOTE:
+
 export default () => (
   <Layout>
     <SEO title="About" />

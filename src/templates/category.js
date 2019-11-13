@@ -5,6 +5,8 @@ import { Sidenav } from "../components/Sidenav"
 import Title from "../components/Title"
 import Type from "../components/Type"
 
+// NOTE:
+
 const getTypes = drinks => {
   let tempHash = {}
   drinks.forEach(({ node }) => {

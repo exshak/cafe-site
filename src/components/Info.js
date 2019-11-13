@@ -1,5 +1,7 @@
 import React from "react"
 
+// NOTE:
+
 const Info = () => (
   <div className="container">
     <div className="row">

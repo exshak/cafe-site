@@ -4,6 +4,8 @@ import React from "react"
 import Layout from "../components/layout"
 import Title from "../components/Title"
 
+// NOTE:
+
 export default ({ data, pageContext }) => {
   const { node } = data.allContentfulCafeDrinks.edges[0]
   // const { items } = pageContext

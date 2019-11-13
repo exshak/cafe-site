@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
+// NOTE:
+
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
   return (

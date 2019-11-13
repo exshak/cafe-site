@@ -1,6 +1,8 @@
 import React from "react"
 import Title from "./Title"
 
+// NOTE:
+
 export default function Info() {
   return (
     <section className="py-5">

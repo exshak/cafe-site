@@ -3,6 +3,8 @@ import Image from "gatsby-image"
 import React, { Component } from "react"
 import Title from "./Title"
 
+// NOTE:
+
 const getCategories = items => {
   let tempHash = {}
   let result = []
@@ -14,7 +16,7 @@ const getCategories = items => {
     return
   })
   let temp = result.sort()
-  // NOTE: implement better sort
+
   return temp
 }
 

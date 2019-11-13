@@ -1,6 +1,8 @@
 import React from "react"
 import Info from "./Info"
 
+// NOTE:
+
 const Footer = () => (
   <footer
     className="mx-auto py-5"

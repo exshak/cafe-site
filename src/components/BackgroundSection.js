@@ -2,6 +2,8 @@ import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import React from "react"
 
+// NOTE:
+
 const BackgroundSection = ({ className }) => (
   <StaticQuery
     query={graphql`

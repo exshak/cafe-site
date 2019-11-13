@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 
+// NOTE:
+
 export const Sidenav = props => {
   return (
     <div class="container-fluid">

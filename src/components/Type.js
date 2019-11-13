@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import React from "react"
 
+// NOTE:
+
 export default ({ data, node, pageContext, path }) => {
   return (
     <div

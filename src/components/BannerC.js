@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import React from "react"
 
+// NOTE:
+
 export const Banner = () => {
   const data = useStaticQuery(graphql`
     query {

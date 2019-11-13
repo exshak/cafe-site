@@ -7,6 +7,8 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 
+// NOTE:
+
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const categoryTemplate = path.resolve(`src/templates/category.js`)
   const itemTemplate = path.resolve(`src/templates/item.js`)

@@ -5,6 +5,8 @@ import { BannerB } from "../components/BannerB"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+// NOTE:
+
 export default () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

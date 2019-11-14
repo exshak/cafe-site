@@ -49,14 +49,15 @@ export default ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($title: String!) {
-    allContentfulCafeDrinks(filter: { title: { eq: $title } }) {
+  query($slug: String!) {
+    allContentfulCafeDrinks(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           id
           title
           category
           type
+          slug
           description {
             description
           }

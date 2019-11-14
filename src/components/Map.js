@@ -3,15 +3,14 @@ import React, { Component } from "react"
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
-// NOTE:
-
 class SimpleMap extends Component {
   static defaultProps = {
+    // NOTE: adjust location, zoom, marker
     center: {
       lat: 59.95,
       lng: 30.33,
     },
-    zoom: 14,
+    zoom: 15,
   }
 
   render() {

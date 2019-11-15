@@ -4,10 +4,10 @@ import React from "react"
 
 // NOTE:
 
-export const BannerB = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ba3.jpg" }) {
+      file(relativePath: { eq: "ba2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

@@ -3,7 +3,7 @@ import React from "react"
 
 // NOTE:
 
-export const Sidenav = props => {
+export default props => {
   return (
     <div class="container-fluid">
       <div class="row">

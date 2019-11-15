@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import React from "react"
 
-// NOTE:
+// NOTE: refactor
 
 export default ({ data, node, pageContext, path }) => {
   return (

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Menu from "../components/Menu"
 import SEO from "../components/seo"
-import { Sidenav } from "../components/Sidenav"
+import Sidenav from "../components/Sidenav"
 
 // NOTE:
 

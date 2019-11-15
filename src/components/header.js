@@ -2,12 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
-// NOTE:
+// NOTE: rename
 
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
   return (
-    <header>
+    <header id="header">
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top py-3">
         {/* <a className="navbar-brand">{siteTitle}</a> */}
         <Link

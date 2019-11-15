@@ -2,8 +2,8 @@ import React from "react"
 
 // NOTE:
 
-const Info = () => (
-  <div className="container">
+export default () => (
+  <div className="container py-5">
     <div className="row">
       <div className="col-12 col-md">
         <svg
@@ -148,13 +148,8 @@ const Info = () => (
   //   }}
   // >
   //   <p>9340 Fashion Ave, CA 90210</p>
-  //   <p> | </p>
   //   <p>Monday - Sunday: 12 pm - 11 pm</p>
-  //   <p> | </p>
   //   <p>Tel: 1-800-765-3242</p>
-  //   <p> | </p>
   //   <p>E-mail: test@gmail.com</p>
   // </div>
 )
-
-export default Info

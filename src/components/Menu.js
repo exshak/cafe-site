@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import React, { Component } from "react"
-import Title from "./Title"
 
 // NOTE:
 
@@ -39,8 +38,8 @@ export default class Menu extends Component {
           marginLeft: `20%`,
         }}
       >
-        <Title title="menu" />
-        <hr />
+        <h1>Menu</h1>
+        <hr className="hr-dark" />
         <div
           style={{
             display: `flex`,

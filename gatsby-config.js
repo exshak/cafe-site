@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Cafelina`, // NOTE: `Cafelina | ???`
+    title: `Cafelina`,
     description: `Cafelina`,
     author: `exshak`,
   },
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-snipcart",
       options: {
-        apiKey: process.env.SNIPCART_API_KEY, // NOTE: get new api key
+        apiKey: process.env.SNIPCART_API_KEY,
         autopop: true,
       },
     },

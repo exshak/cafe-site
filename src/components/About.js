@@ -1,23 +1,57 @@
+import { graphql, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
 import React from "react"
-import Title from "./Title"
 
 // NOTE:
 
-export default function Info() {
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "ba.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
-    <section className="py-5">
+    <section aria-label="About Form" className="about mb-5 pb-5" id="about">
       <div className="container">
-        <Title title="our story" />
+        <h1 className="text-center font-weight-bold pt-5 mb-3">
+          <em>About us</em>
+        </h1>
+        <p className="text-center text-uppercase font-weight-bold text-muted mb-5 pb-4">
+          With love to nature
+        </p>
         <div className="row">
-          <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel amet
-              labore tempore delectus voluptate inventore? Iste tempore
-              molestias eaque rem quis blanditiis, facilis excepturi, magnam,
-              itaque earum sed fuga quia? At autem corporis ipsam libero
-              laboriosam! Unde autem nesciunt beatae, facere illum rerum
-              corporis nihil, sint, commodi in debitis quia.
+          <div className="col-xl-5 mr-auto col-lg-6 mb-lg-0 mb-4">
+            <Image
+              fluid={data.file.childImageSharp.fluid}
+              className="img-fluid rounded z-depth-1-half"
+              style={{
+                height: `333px`,
+              }}
+              alt="My photo"
+            />
+          </div>
+          <div className="col-xl-6 col-lg-6 pb-3">
+            <p className="lead" align="justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+              animi soluta ratione quisquam, dicta ab cupiditate iure eaque?
+              Repellendus voluptatum, magni impedit eaque animi maxime.
             </p>
+            <p align="justify">
+              Nemo animi soluta ratione quisquam, dicta ab cupiditate iure
+              eaque? Repellendus voluptatum, magni impedit eaque delectus,
+              beatae maxime temporibus maiores quibusdam quasi rem magnam.
+            </p>
+            <ul>
+              <li>Nemo animi soluta ratione</li>
+              <li>Beatae maxime temporibus</li>
+              <li>Consectetur adipisicing elit</li>
+            </ul>
           </div>
         </div>
       </div>

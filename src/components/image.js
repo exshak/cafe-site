@@ -13,7 +13,7 @@ import React from "react"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-// NOTE:
+// NOTE: rename
 
 const Image = () => {
   const data = useStaticQuery(graphql`

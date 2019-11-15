@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import React from "react"
 import Layout from "../components/layout"
-import Title from "../components/Title"
 
 // NOTE:
 
@@ -11,7 +10,7 @@ export default ({ data, pageContext }) => {
   // const { items } = pageContext
   return (
     <Layout>
-      <Title title={node.type} />
+      <h1>{node.type}</h1>
       <div
         style={{
           display: `flex`,

@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import { Sidenav } from "../components/Sidenav"
-import Title from "../components/Title"
 import Type from "../components/Type"
 
 // NOTE:
@@ -31,7 +30,7 @@ export default ({ data, pageContext, path }) => {
           marginLeft: `20%`,
         }}
       >
-        <Title title={pageContext.category} />
+        <h1>{pageContext.category}</h1>
         <hr />
         {drinks.distinct.map(type => {
           return (
@@ -46,7 +45,7 @@ export default ({ data, pageContext, path }) => {
                 {drinks.edges.map(({ node }) => {
                   if (type === node.type) {
                     return <Type node={node} path={path} />
-                  }
+                  } else return null
                 })}
               </div>
             </div>

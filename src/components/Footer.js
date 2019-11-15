@@ -3,25 +3,15 @@ import Info from "./Info"
 
 // NOTE:
 
-const Footer = () => (
-  <footer
-    className="mx-auto py-5"
-    style={{
-      maxWidth: `960px`,
-    }}
-  >
-    <Info />
-    <div
-      className="pt-5"
-      style={{
-        textAlign: `center`,
-      }}
-    >
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+export default () => (
+  <footer id="footer">
+    <div className="page-footer mx-auto">
+      <Info />
+      <div className="footer-copyright py-4 text-center">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </div>
     </div>
   </footer>
 )
-
-export default Footer

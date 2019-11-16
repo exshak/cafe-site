@@ -3,11 +3,10 @@ import Image from "gatsby-image"
 import React from "react"
 import Layout from "../components/layout"
 
-// NOTE:
+// NOTE: destructure node to keys
 
-export default ({ data, pageContext }) => {
+export default ({ data }) => {
   const { node } = data.allContentfulCafeDrinks.edges[0]
-  // const { items } = pageContext
   return (
     <Layout>
       <h1>{node.type}</h1>

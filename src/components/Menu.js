@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import React, { Component } from "react"
 
-// NOTE:
+// NOTE: map over distinct, import images
 
 const getCategories = items => {
   let tempHash = {}
@@ -15,7 +15,6 @@ const getCategories = items => {
     return
   })
   let temp = result.sort()
-
   return temp
 }
 

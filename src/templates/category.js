@@ -1,10 +1,10 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
-import { Sidenav } from "../components/Sidenav"
-import Type from "../components/Type"
+import Sidenav from "../components/Sidenav"
+import Subcategory from "../components/Subcategory"
 
-// NOTE:
+// NOTE: new component for type => item
 
 const getTypes = drinks => {
   let tempHash = {}
@@ -32,73 +32,23 @@ export default ({ data, pageContext, path }) => {
       >
         <h1>{pageContext.category}</h1>
         <hr />
-        {drinks.distinct.map(type => {
-          return (
-            <div>
-              <h3>{type}</h3>
-              <div
-                style={{
-                  display: `flex`,
-                  flexWrap: `wrap`,
-                }}
-              >
-                {drinks.edges.map(({ node }) => {
-                  if (type === node.type) {
-                    return <Type node={node} path={path} />
-                  } else return null
-                })}
-              </div>
-            </div>
-          )
-        })}
+        {drinks.distinct.map(type => (
+          <Subcategory type={type} drinks={drinks} path={path} />
+        ))}
       </div>
       <Sidenav category={drinks} />
     </Layout>
-    // {/* <main>
-    //   <div
-    //     style={{
-    //       textAlign: `center`,
-    //       margin: `0 auto`,
-    //       maxWidth: 960,
-    //       padding: `0px 1.0875rem 1.45rem`,
-    //     }}
-    //   >
-    //     <Title title={pageContext.category} />
-    //     <hr />
-    //     <div style={{}}>
-    //       {drinks.edges.map(({ node }) => {
-    //         return (
-    //           <div style={{}}>
+
+    //       {drinks.edges.map(({ node }) => (
     //             <h1>{node.type}</h1>
-    //             <div
-    //               style={{
+    //             <div style={{
     //                 display: `flex`,
     //                 margin: `10px`,
-    //                 width: `400px`,
-    //               }}
-    //             >
-    //               <Image
-    //                 fixed={node.image.fixed}
-    //                 style={{
-    //                   borderRadius: `50% 50% 50% 50%`,
-    //                 }}
-    //               />
+    //                 width: `400px`}}
+    //               <Image fixed={node.image.fixed}
     //               <Link to={path + "/" + node.slug}>
-    //                 <h1
-    //                   style={{
-    //                     margin: `20px`,
-    //                   }}
-    //                 >
+    //                 <h1 style={{ margin: `20px`}}
     //                   {node.title}
-    //                 </h1>
-    //               </Link>
-    //             </div>
-    //           </div>
-    //         )
-    //       })}
-    //     </div>
-    //   </div>
-    // </main> */}
     // {/* <div dangerouslySetInnerHTML={{ __html: post.html }} /> */}
   )
 }

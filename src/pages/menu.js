@@ -5,8 +5,6 @@ import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import Sidenav from "../components/Sidenav"
 
-// NOTE:
-
 export default ({ data }) => (
   <Layout>
     <SEO title="Menu" />

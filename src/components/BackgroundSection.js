@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import React from "react"
 
@@ -27,16 +27,18 @@ export default ({ className }) => (
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
-          <h1
-            style={{
-              color: `white`,
-              fontStyle: `oblique`,
-              textAlign: `right`,
-              padding: `17vh 10%`,
-            }}
+          <div className="text-right">
+            <Link
+              to="/menu"
+              className="btn btn-light"
+              style={{
+                margin: `20vh 10%`,
+              }}
+            >
+              Browse Menu
+            </Link>
+          </div>
           >
-            Cafelina
-          </h1>
         </BackgroundImage>
       )
     }}

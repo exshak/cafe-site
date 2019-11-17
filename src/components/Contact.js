@@ -1,7 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
-
-// NOTE: add api, fix icons, fix links
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaRegPaperPlane,
+  FaTwitter,
+} from "react-icons/fa"
 
 export default () => (
   <section aria-label="Contact Form" className="contact-section my-5">
@@ -15,8 +22,7 @@ export default () => (
               method="POST"
             >
               <h3 className="mt-4">
-                <i className="fas fa-envelope pr-2" />
-                Contact us:
+                <FaEnvelope className="mb-1" /> Contact us:
               </h3>
               <div className="row">
                 <div className="col-md-6">
@@ -87,8 +93,11 @@ export default () => (
                     <label htmlFor="form-contact-message" hidden>
                       Your message
                     </label>
-                    <Link className="btn-floating btn-lg">
-                      <i className="far fa-paper-plane" />
+                    <Link
+                      to="/contact"
+                      className="btn-floating btn-lg btn-dark py-1"
+                    >
+                      <FaRegPaperPlane />
                     </Link>
                   </div>
                 </div>
@@ -101,19 +110,18 @@ export default () => (
               <ul className="text-lg-left list-unstyled ml-4">
                 <li>
                   <p>
-                    <i className="fas fa-map-marker-alt pr-2 mb-4" />
-                    San Francisco, CA 90123
+                    <FaMapMarkerAlt className="list-contact mb-1" /> Oakland, CA
+                    94621
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i className="fas fa-phone pr-2 mb-4" />
-                    (123) 456-7890
+                    <FaPhone className="list-contact mb-1" /> (123) 456-7890
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i className="fas fa-envelope pr-2" />
+                    <FaEnvelope className="list-contact mb-1" />{" "}
                     contact@cafelina.com
                   </p>
                 </li>
@@ -121,18 +129,18 @@ export default () => (
               <hr className="hr-light my-4" />
               <ul className="list-inline text-center list-unstyled">
                 <li className="list-inline-item">
-                  <Link className="p-2 fa-lg tw-ic">
-                    <i className="fab fa-twitter" />
+                  <Link to="/contact" className="list-social p-2">
+                    <FaTwitter />
                   </Link>
                 </li>
                 <li className="list-inline-item">
-                  <Link className="p-2 fa-lg li-ic">
-                    <i className="fab fa-linkedin-in" />
+                  <Link to="/contact" className="list-social p-2">
+                    <FaFacebookF />
                   </Link>
                 </li>
                 <li className="list-inline-item">
-                  <Link className="p-2 fa-lg ins-ic">
-                    <i className="fab fa-instagram" />
+                  <Link to="/contact" className="list-social p-2">
+                    <FaInstagram />
                   </Link>
                 </li>
               </ul>

@@ -50,7 +50,7 @@ export default () => {
               <p align="justify">Cafelina stands by:</p>
               <ul>
                 <li>100% customer satisfaction</li>
-                <li>adsjflakjdsfasdklfjalsdj</li>
+                <li>Fun place for the family</li>
                 <li>Free unlimited wi-fi</li>
               </ul>
             </div>

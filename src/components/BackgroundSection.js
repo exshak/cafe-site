@@ -38,7 +38,6 @@ export default ({ className }) => (
               Browse Menu
             </Link>
           </div>
-          >
         </BackgroundImage>
       )
     }}

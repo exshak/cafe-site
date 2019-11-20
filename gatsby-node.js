@@ -1,6 +1,6 @@
 const path = require(`path`)
-// Implement the Gatsby API “createPages”. This is called once the
-// data layer is bootstrapped to let plugins create pages from data.
+
+// createPages is called once the data layer is bootstrapped to create pages from data.
 exports.createPages = async ({
   actions: { createPage },
   graphql,
@@ -8,6 +8,7 @@ exports.createPages = async ({
 }) => {
   const categoryTemplate = path.resolve(`src/templates/category.js`)
   const productTemplate = path.resolve(`src/templates/product.js`)
+
   // Query for all categories and products
   const { data, errors } = await graphql(`
     query {
@@ -21,14 +22,17 @@ exports.createPages = async ({
       }
     }
   `)
+
   // Handle errors
   if (errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
   // Iterate over all products and create a new page
   data.allContentfulCafeDrinks.edges.forEach(({ node }) => {
     const category = node.category.replace(/\W/g, "-").toLowerCase()
+
     // Create categories pages
     createPage({
       path: category,
@@ -37,6 +41,7 @@ exports.createPages = async ({
         category: node.category,
       },
     })
+
     // Create products pages
     createPage({
       path: `${category}/${node.slug}`,

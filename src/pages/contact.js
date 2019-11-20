@@ -1,8 +1,8 @@
 import React from "react"
-import Contact from "../components/Contact"
-import Layout from "../components/layout"
-import Map from "../components/Map"
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
+import Contact from "../components/contact/Contact"
+import Map from "../components/contact/Map"
+import Layout from "../components/layout/layout"
 
 export default () => (
   <Layout>

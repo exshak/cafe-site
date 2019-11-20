@@ -1,8 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Layout from "../components/layout"
-import Sidenav from "../components/Sidenav"
-import Subcategory from "../components/Subcategory"
+import Layout from "../components/layout/layout"
+import Sidenav from "../components/menu/Sidenav"
+import Subcategory from "../components/menu/Subcategory"
 
 // NOTE: new component for type => item
 

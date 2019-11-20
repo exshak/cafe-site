@@ -1,15 +1,13 @@
 import React from "react"
-import BackgroundSection from "../components/BackgroundSection"
-import Banner from "../components/Banner"
-import BannerB from "../components/BannerB"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
+import BackgroundSection from "../components/home/BackgroundSection"
+import Banner from "../components/home/Banner"
+import Layout from "../components/layout/layout"
 
 export default () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <BackgroundSection />
     <Banner />
-    <BannerB />
   </Layout>
 )

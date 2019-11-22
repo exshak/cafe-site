@@ -1,10 +1,10 @@
-import { graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import "./bootstrap.min.css"
-import Footer from "./footer/Footer"
-import Header from "./header/header"
-import "./layout.css"
+import { graphql, useStaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import './bootstrap.min.css'
+import Footer from './footer/Footer'
+import Header from './header/header'
+import './layout.css'
 
 // NOTE: rename
 

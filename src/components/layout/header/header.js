@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 // NOTE: rename
 
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => {
         {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo02"> */}
         <div
           className={
-            open ? "collapse navbar-collapse show" : "collapse navbar-collapse"
+            open ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'
           }
           id="navbarTogglerDemo02"
         >

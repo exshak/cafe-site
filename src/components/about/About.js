@@ -1,9 +1,9 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import React from "react"
-import { FaShoppingBag } from "react-icons/fa"
-import { GiCoffeeBeans } from "react-icons/gi"
-import { TiLeaf } from "react-icons/ti"
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image'
+import React from 'react'
+import { FaShoppingBag } from 'react-icons/fa'
+import { GiCoffeeBeans } from 'react-icons/gi'
+import { TiLeaf } from 'react-icons/ti'
 
 export default () => {
   const data = useStaticQuery(graphql`

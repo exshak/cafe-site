@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 import {
   FaEnvelope,
   FaFacebookF,
@@ -8,7 +8,7 @@ import {
   FaPhone,
   FaRegPaperPlane,
   FaTwitter,
-} from "react-icons/fa"
+} from 'react-icons/fa'
 
 export default () => (
   <section aria-label="Contact Form" className="contact-section my-5">
@@ -121,7 +121,7 @@ export default () => (
                 </li>
                 <li>
                   <p>
-                    <FaEnvelope className="list-contact mb-1" />{" "}
+                    <FaEnvelope className="list-contact mb-1" />{' '}
                     contact@cafelina.com
                   </p>
                 </li>

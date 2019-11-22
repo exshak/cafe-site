@@ -31,7 +31,7 @@ exports.createPages = async ({
 
   // Iterate over all products and create a new page
   data.allContentfulCafeDrinks.edges.forEach(({ node }) => {
-    const category = node.category.replace(/\W/g, "-").toLowerCase()
+    const category = node.category.replace(/\W/g, '-').toLowerCase()
 
     // Create categories pages
     createPage({

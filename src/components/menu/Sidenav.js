@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 
 // NOTE:
 
@@ -32,7 +32,7 @@ export default props => {
                 return (
                   <li className="nav-item">
                     <Link
-                      to={node.replace(/\W/g, "-").toLowerCase()}
+                      to={node.replace(/\W/g, '-').toLowerCase()}
                       className="nav-link"
                       style={{
                         color: `black`,

@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import Image from "gatsby-image"
-import React, { Component } from "react"
+import { Link } from 'gatsby'
+import Image from 'gatsby-image'
+import React, { Component } from 'react'
 
 // NOTE: map over distinct, import images
 
@@ -61,7 +61,7 @@ export default class Menu extends Component {
                   }}
                 />
                 <Link
-                  to={node[0].replace(/\W/g, "-").toLowerCase()}
+                  to={node[0].replace(/\W/g, '-').toLowerCase()}
                   style={{
                     color: `black`,
                     textDecoration: `none`,

@@ -1,6 +1,6 @@
-import { graphql, Link, StaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import React from "react"
+import { graphql, Link, StaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
+import React from 'react'
 
 // NOTE:
 
@@ -23,7 +23,7 @@ export default ({ className }) => (
       return (
         <BackgroundImage
           Tag="section"
-          className={(className, "background-image")}
+          className={(className, 'background-image')}
           fluid={imageData}
           backgroundColor={`#040e18`}
         >

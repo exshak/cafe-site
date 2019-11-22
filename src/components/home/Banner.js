@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import React from "react"
+import { graphql, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image'
+import React from 'react'
 
 // NOTE:
 

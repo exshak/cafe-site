@@ -59,6 +59,127 @@ export default () => {
         <article>
           <hr className="hr-dark my-5" />
           <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
+            <strong>us</strong>
+          </h5>
+          <div class="row">
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <TiLeaf />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Organic</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  Every cup of our quality artisan coffee starts with locally
+                  sourced, hand picked ingredients. Once you try it, our coffee
+                  will be a blissful addition to your everyday morning routine -
+                  we guarantee it!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <GiCoffeeBeans />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Roasted</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  When you walk into our shop to start your day, we are
+                  dedicated to providing you with friendly service, a welcoming
+                  atmosphere, and above all else, excellent products made with
+                  the highest quality ingredients. If you are not satisfied,
+                  please let us know and we will do whatever we can to make
+                  things right!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <FaShoppingBag
+                // style={{
+                //   height: `40px`,
+                //   width: `40px`,
+                // }}
+                />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Fairtrade</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  Founded in 1987 by the Hernandez brothers, our establishment
+                  has been serving up rich coffee sourced from artisan farmers
+                  in various regions of South and Central America. We are
+                  dedicated to travelling the world, finding the best coffee,
+                  and bringing back to you here in our cafe. We guarantee that
+                  you will fall in lust with our decadent blends the moment you
+                  walk inside until you finish your last sip. Join us for your
+                  daily routine, an outing with friends, or simply just to enjoy
+                  some alone time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <hr className="hr-dark my-5" />
+          <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
+            <strong>more info</strong>
+          </h5>
+          <div class="row">
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <TiLeaf />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Organic</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  We take pride in our work, and it shows. Every time you order
+                  a beverage from us, we guarantee that it will be an experience
+                  worth having. Whether it's our world famous Venezuelan
+                  Cappuccino, a refreshing iced herbal tea, or something as
+                  simple as a cup of speciality sourced black coffee, you will
+                  be coming back for more.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <GiCoffeeBeans />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Roasted</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  Our seasonal menu features delicious snacks, baked goods, and
+                  even full meals perfect for breakfast or lunchtime. We source
+                  our ingredients from local, oragnic farms whenever possible,
+                  alongside premium vendors for specialty goods.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+              <div class="card card-body rgba-white-light hoverable">
+                <FaShoppingBag
+                // style={{
+                //   height: `40px`,
+                //   width: `40px`,
+                // }}
+                />
+                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                  <strong>Fairtrade</strong>
+                </p>
+                <p class="dark-grey-text font-small">
+                  Travelling the world for the very best quality coffee is
+                  something take pride in. When you visit us, you'll always find
+                  new blends from around the world, mainly from regions in
+                  Central and South America. We sell our blends in smaller to
+                  large bulk quantities. Please visit us in person for more
+                  details.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <hr className="hr-dark my-5" />
+          <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
             <strong>our products</strong>
           </h5>
           <div class="row">
@@ -91,10 +212,10 @@ export default () => {
             <div class="col-md-4 mb-4 text-center">
               <div class="card card-body rgba-white-light hoverable">
                 <FaShoppingBag
-                  style={{
-                    height: `40px`,
-                    width: `40px`,
-                  }}
+                // style={{
+                //   height: `40px`,
+                //   width: `40px`,
+                // }}
                 />
                 <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Fairtrade</strong>

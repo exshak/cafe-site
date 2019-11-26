@@ -4,7 +4,7 @@ import React from 'react'
 
 // NOTE:
 
-export default () => {
+const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "ba1.jpg" }) {
@@ -52,3 +52,5 @@ export default () => {
     </div>
   )
 }
+
+export default Banner

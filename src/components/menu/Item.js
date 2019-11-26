@@ -4,37 +4,35 @@ import React from 'react'
 
 // NOTE: refactor
 
-export default ({ node, path }) => {
-  return (
-    <div
+export const Item = ({ node, path }) => (
+  <div
+    style={{
+      // display: `flex`,
+      margin: `10px`,
+      // flexWrap: `wrap`,
+      width: `250px`,
+    }}
+  >
+    <Image
+      fixed={node.image.fixed}
       style={{
-        // display: `flex`,
-        margin: `10px`,
-        // flexWrap: `wrap`,
-        width: `250px`,
+        borderRadius: `50% 50% 50% 50%`,
+      }}
+    />
+    <Link
+      to={`${path}/${node.slug}`}
+      style={{
+        color: `black`,
+        textDecoration: `none`,
       }}
     >
-      <Image
-        fixed={node.image.fixed}
+      <h4
         style={{
-          borderRadius: `50% 50% 50% 50%`,
-        }}
-      />
-      <Link
-        to={`${path}/${node.slug}`}
-        style={{
-          color: `black`,
-          textDecoration: `none`,
+          margin: `20px`,
         }}
       >
-        <h4
-          style={{
-            margin: `20px`,
-          }}
-        >
-          {node.title}
-        </h4>
-      </Link>
-    </div>
-  )
-}
+        {node.title}
+      </h4>
+    </Link>
+  </div>
+)

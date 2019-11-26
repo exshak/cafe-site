@@ -5,7 +5,7 @@ import { FaShoppingBag } from 'react-icons/fa'
 import { GiCoffeeBeans } from 'react-icons/gi'
 import { TiLeaf } from 'react-icons/ti'
 
-export default () => {
+const About = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "ba.jpg" }) {
@@ -238,3 +238,5 @@ export default () => {
     </section>
   )
 }
+
+export default About

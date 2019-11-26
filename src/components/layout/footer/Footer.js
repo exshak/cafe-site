@@ -1,9 +1,9 @@
 import React from 'react'
-import Info from './Info'
+import { Info } from './Info'
 
 // NOTE:
 
-export default () => (
+export const Footer = () => (
   <footer id="footer">
     <div className="page-footer mx-auto">
       <Info />

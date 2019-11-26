@@ -4,7 +4,7 @@ import React from 'react'
 
 // NOTE:
 
-export default ({ className }) => (
+const BackgroundSection = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -43,3 +43,5 @@ export default ({ className }) => (
     }}
   />
 )
+
+export default BackgroundSection

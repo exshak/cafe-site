@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout/layout'
-import Sidenav from '../components/menu/Sidenav'
-import Subcategory from '../components/menu/Subcategory'
+import Sidenav from '../components/menu/SideNav'
+import SubCategory from '../components/menu/SubCategory'
 
 // NOTE: new component for type => item
 
@@ -33,7 +33,7 @@ export default ({ data, pageContext, path }) => {
         <h1>{pageContext.category}</h1>
         <hr />
         {drinks.distinct.map(type => (
-          <Subcategory type={type} drinks={drinks} path={path} />
+          <SubCategory type={type} drinks={drinks} path={path} />
         ))}
       </div>
       <Sidenav category={drinks} />

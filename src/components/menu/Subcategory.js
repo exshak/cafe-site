@@ -1,9 +1,9 @@
 import React from 'react'
-import Item from './Item'
+import { Item } from './Item'
 
 // NOTE: destructure
 
-export default ({ type, drinks, path }) => (
+const SubCategory = ({ type, drinks, path }) => (
   <div>
     <h3>{type}</h3>
     <div
@@ -20,3 +20,5 @@ export default ({ type, drinks, path }) => (
     </div>
   </div>
 )
+
+export default SubCategory

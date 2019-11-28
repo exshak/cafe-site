@@ -67,3 +67,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Extra
+.prettierignore
+gatsby-browser.js
+gatsby-ssr.js

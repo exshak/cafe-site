@@ -69,6 +69,6 @@ yarn-error.log
 .yarn-integrity
 
 # Extra
-# .prettierignore
-# gatsby-browser.js
-# gatsby-ssr.js
+.prettierignore
+gatsby-browser.js
+gatsby-ssr.js

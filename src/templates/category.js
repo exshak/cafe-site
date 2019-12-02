@@ -38,7 +38,6 @@ export default ({ data, pageContext, path }) => {
       </div>
       <Sidenav category={drinks} />
     </Layout>
-
     //       {drinks.edges.map(({ node }) => (
     //             <h1>{node.type}</h1>
     //             <div style={{

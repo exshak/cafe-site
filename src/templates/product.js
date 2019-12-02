@@ -18,7 +18,7 @@ export default ({ data }) => {
         <Image
           fixed={node.image.fixed}
           style={{
-            borderRadius: `50% 50% 50% 50%`,
+            borderRadius: `50%`,
           }}
         />
         <h1

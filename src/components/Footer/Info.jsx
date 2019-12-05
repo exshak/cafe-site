@@ -1,7 +1,5 @@
 import React from 'react'
 
-// NOTE:
-
 export const Info = () => (
   <div className="container py-5">
     <div className="row">
@@ -138,10 +136,4 @@ export const Info = () => (
       </div>
     </div>
   </div>
-  //   style={{
-  //     margin: `0 auto`,
-  //     maxWidth: 960,
-  //     padding: `0px 1.0875rem 1.45rem`,
-  //     display: `flex`,
-  //     justifyContent: `center`,
 )

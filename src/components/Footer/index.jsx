@@ -1,9 +1,7 @@
 import React from 'react'
 import { Info } from './Info'
 
-// NOTE:
-
-export const Footer = () => (
+const Footer = () => (
   <footer id="footer">
     <div className="page-footer mx-auto">
       <Info />
@@ -15,3 +13,5 @@ export const Footer = () => (
     </div>
   </footer>
 )
+
+export default Footer

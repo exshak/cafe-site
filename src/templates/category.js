@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Layout from '../components/layout/layout'
+import Layout from '../components/Layout'
 import Sidenav from '../components/menu/SideNav'
 import SubCategory from '../components/menu/SubCategory'
 

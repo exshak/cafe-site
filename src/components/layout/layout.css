@@ -102,6 +102,10 @@ nav {
   -moz-box-shadow: 0 3px 3px -3px black;
   box-shadow: 0 3px 3px -3px black;
 }
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
 /* Gradient color1 - color2 - color1 */
 .hr-dark {
   border: 0;

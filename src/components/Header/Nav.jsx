@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 export const Nav = () => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
       <button
@@ -27,68 +28,27 @@ export const Nav = () => {
       >
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0 ">
           <li className="nav-item active">
-            {/* <a className="nav-link">
-              Home <span className="sr-only"></span>
-              </a> */}
-            <Link
-              to="/"
-              className="nav-link"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-              }}
-            >
-              Home <span className="sr-only"></span>
+            <Link to="/" className="nav-link">
+              Home
             </Link>
           </li>
           <li className="nav-item">
-            {/* <a className="nav-link">Link</a> */}
-            <Link
-              to="/menu"
-              className="nav-link"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-              }}
-            >
+            <Link to="/menu" className="nav-link">
               Menu
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to="/about"
-              className="nav-link"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-              }}
-            >
+            <Link to="/about" className="nav-link">
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to="/contact"
-              className="nav-link"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-              }}
-            >
+            <Link to="/contact" className="nav-link">
               Contact
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to=""
-              className="nav-link snipcart-checkout"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-              }}
-            >
-              Cart
-            </Link>
+            <Link className="nav-link snipcart-checkout">Cart</Link>
           </li>
         </ul>
       </div>

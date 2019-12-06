@@ -7,8 +7,8 @@ html {
 *:after {
   box-sizing: inherit;
 }
-.z-depth-1-half {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+main {
+  margin-top: 70px;
 }
 /* Contact */
 .maps-info-window {
@@ -64,7 +64,7 @@ html {
   background-color: #be856f;
   border-radius: 0 0.25rem 0.25rem 0;
 }
-.list-contact,
+/* .list-contact, */
 .list-social {
   color: #efdbca;
 }
@@ -79,11 +79,11 @@ html {
 /*  */
 .page-footer {
   bottom: 0;
-  color: #fff;
+  /* color: #fff; */
   background-color: #efdbca;
 }
 .page-footer a {
-  color: #fff;
+  color: #000;
 }
 .page-footer .footer-copyright {
   overflow: hidden;
@@ -96,15 +96,16 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5)); */
 }
 nav {
   -webkit-box-shadow: 0 3px 3px -3px black;
   -moz-box-shadow: 0 3px 3px -3px black;
   box-shadow: 0 3px 3px -3px black;
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
-.nav-link {
-  color: black;
-  text-decoration: none;
+.z-depth-1-half {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
 }
 /* Gradient color1 - color2 - color1 */
 .hr-dark {

@@ -33,6 +33,7 @@ class SimpleMap extends Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
             options={mapStyles}
+            yesIWantToUseGoogleMapApiInternals={true}
             onGoogleApiLoaded={({ map, maps }) => {
               renderMarkers(map, maps)
               renderWindows(map, maps)

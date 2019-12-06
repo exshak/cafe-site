@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import SEO from '../components/common/seo'
 import Layout from '../components/Layout'
 import Menu from '../components/menu/Menu'
 import SideNav from '../components/menu/Sidenav'
+import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>

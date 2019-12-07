@@ -7,13 +7,13 @@ import './bootstrap.min.css'
 import './layout.css'
 
 const Layout = ({ children }) => {
-  const { title } = useSiteMetadata()
+  const { title, author } = useSiteMetadata()
 
   return (
     <>
       <Header siteTitle={title} />
       <main id="content">{children}</main>
-      <Footer />
+      <Footer siteAuthor={author} />
     </>
   )
 }

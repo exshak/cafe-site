@@ -5,6 +5,7 @@ const Footer = () => (
   <footer id="footer">
     <div className="page-footer mx-auto">
       <Info />
+      <hr style={{ maxWidth: `90vw` }} />
       <div className="footer-copyright py-3 text-center">
         © {new Date().getFullYear()}, Built with
         {` `}

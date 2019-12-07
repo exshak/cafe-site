@@ -25,7 +25,7 @@ const Banner = () => {
         <div className="col-md-6 mx-3 my-5">
           <Image
             fluid={data.file.childImageSharp.fluid}
-            // className="rounded"
+            className="rounded z-depth-1-half"
             alt="Coffee"
           />
         </div>

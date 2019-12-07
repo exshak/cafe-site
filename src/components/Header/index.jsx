@@ -2,11 +2,11 @@ import classnames from 'classnames'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import { GiCoffeeMug } from 'react-icons/gi'
+import { SiteLogo } from '../Common/SiteLogo'
 import { NavBar } from './NavBar'
 
 const Header = ({ siteTitle }) => {
-  const [navbarColor, setNavbarColor] = useState('py-3')
+  const [navbarColor, setNavbarColor] = useState('py-2')
   const [navbarCollapse, setNavbarCollapse] = useState(false)
 
   const toggleNavbarCollapse = () => {
@@ -16,9 +16,9 @@ const Header = ({ siteTitle }) => {
   useEffect(() => {
     const updateNavbarColor = () => {
       if (document.documentElement.scrollTop > 99) {
-        setNavbarColor('py-2')
+        setNavbarColor('py-0')
       } else if (document.documentElement.scrollTop < 100) {
-        setNavbarColor('py-3')
+        setNavbarColor('py-2')
       }
     }
 
@@ -37,8 +37,8 @@ const Header = ({ siteTitle }) => {
           navbarColor
         )}
       >
-        <Link to="/" className="navbar-brand font-italic">
-          <GiCoffeeMug /> {siteTitle}
+        <Link to="/" className="navbar-brand">
+          <SiteLogo logoWidth={150} logoAlt={siteTitle} />
         </Link>
         <NavBar
           isCollapsed={navbarCollapse}

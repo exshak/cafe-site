@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import { Link } from 'gatsby'
 import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
@@ -10,14 +11,10 @@ export const NavBar = ({ isCollapsed, toggleCollapse }) => (
       aria-expanded={isCollapsed}
       onClick={toggleCollapse}
     >
-      <span className="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon" />
     </button>
     <div
-      className={
-        isCollapsed
-          ? 'collapse navbar-collapse show'
-          : 'collapse navbar-collapse'
-      }
+      className={classnames('collapse navbar-collapse', isCollapsed && ' show')}
     >
       <ul className="navbar-nav ml-auto mt-lg-0 ">
         <li className="nav-item">

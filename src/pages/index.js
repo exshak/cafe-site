@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundSection from '../components/home/BackgroundSection'
+import BackgroundSliders from '../components/Home/BackgroundSliders'
 import Banner from '../components/home/Banner'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 export default () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <BackgroundSection />
+    <BackgroundSliders />
     <Banner />
   </Layout>
 )

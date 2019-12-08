@@ -37,13 +37,15 @@ const Header = ({ siteTitle }) => {
           navbarColor
         )}
       >
-        <Link to="/" className="navbar-brand">
-          <SiteLogo logoWidth={150} logoAlt={siteTitle} />
-        </Link>
-        <NavBar
-          isCollapsed={navbarCollapse}
-          toggleCollapse={toggleNavbarCollapse}
-        />
+        <div className="container">
+          <Link to="/" className="navbar-brand">
+            <SiteLogo logoWidth={150} logoAlt={siteTitle} />
+          </Link>
+          <NavBar
+            isCollapsed={navbarCollapse}
+            toggleCollapse={toggleNavbarCollapse}
+          />
+        </div>
       </nav>
     </header>
   )

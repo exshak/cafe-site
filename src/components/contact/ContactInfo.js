@@ -1,13 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaTwitter,
-} from 'react-icons/fa'
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
+import { SocialLinks } from '../Common/SocialLinks'
 
 export const ContactInfo = () => (
   <div className="col-lg-4">
@@ -31,23 +24,7 @@ export const ContactInfo = () => (
         </li>
       </ul>
       <hr className="hr-light my-4" />
-      <ul className="list-inline text-center list-unstyled">
-        <li className="list-inline-item">
-          <Link to="/contact" className="list-social p-2">
-            <FaTwitter />
-          </Link>
-        </li>
-        <li className="list-inline-item">
-          <Link to="/contact" className="list-social p-2">
-            <FaFacebookF />
-          </Link>
-        </li>
-        <li className="list-inline-item">
-          <Link to="/contact" className="list-social p-2">
-            <FaInstagram />
-          </Link>
-        </li>
-      </ul>
+      <SocialLinks />
     </div>
   </div>
 )

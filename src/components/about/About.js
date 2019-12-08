@@ -8,7 +8,7 @@ import { TiLeaf } from 'react-icons/ti'
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ba.jpg" }) {
+      file(relativePath: { eq: "images/ba.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

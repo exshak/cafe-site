@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Helmet from 'react-helmet'
-import { useSiteMetadata } from '../common/useSiteMetadata'
+import { SiteMetadata } from '../Common/SiteMetadata'
 
 function SEO({ description, lang, meta, title }) {
-  const siteMetadata = useSiteMetadata()
+  const siteMetadata = SiteMetadata()
   const metaDescription = description || siteMetadata.description
 
   return (

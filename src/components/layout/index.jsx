@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { useSiteMetadata } from '../Common/useSiteMetadata'
+import { SiteMetadata } from '../Common/SiteMetadata'
 import Footer from '../Footer'
 import Header from '../Header'
 import './bootstrap.min.css'
 import './layout.css'
 
 const Layout = ({ children }) => {
-  const { title, author } = useSiteMetadata()
+  const { title, author } = SiteMetadata()
 
   return (
     <>
       <Header siteTitle={title} />
       <main id="content">{children}</main>
-      <Footer siteAuthor={author} />
+      <Footer siteTitle={title} siteAuthor={author} />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { FaEnvelope, FaRegPaperPlane } from 'react-icons/fa'
+import { FaEnvelope } from 'react-icons/fa'
 import { ContactInfo } from './ContactInfo'
 
 const Contact = () => (
@@ -90,7 +90,7 @@ const Contact = () => (
                       to="/contact"
                       className="btn-floating btn-lg btn-dark py-1"
                     >
-                      <FaRegPaperPlane />
+                      Submit
                     </Link>
                   </div>
                 </div>

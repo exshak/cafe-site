@@ -7,7 +7,7 @@ import React from 'react'
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ba1.jpg" }) {
+      file(relativePath: { eq: "images/ba1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -18,9 +18,9 @@ const Banner = () => {
   `)
   return (
     <div className="container">
-      <div className="row">
+      {/* <div className="row">
         <div className="col mt-5"></div>
-      </div>
+      </div> */}
       <div className="row">
         <div className="col-md-6 mx-3 my-5">
           <Image

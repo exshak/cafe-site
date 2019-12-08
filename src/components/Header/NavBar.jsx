@@ -14,9 +14,9 @@ export const NavBar = ({ isCollapsed, toggleCollapse }) => (
       <span className="navbar-toggler-icon" />
     </button>
     <div
-      className={classnames('collapse navbar-collapse', isCollapsed && ' show')}
+      className={classnames('collapse navbar-collapse', isCollapsed && 'show')}
     >
-      <ul className="navbar-nav ml-auto mt-lg-0 ">
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <li className="nav-item">
           <Link to="/" className="nav-link" activeClassName="active">
             Home

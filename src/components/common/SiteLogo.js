@@ -7,7 +7,7 @@ export const SiteLogo = ({ logoWidth, logoAlt }) => {
   const data = useStaticQuery(
     graphql`
       query SiteLogo {
-        file(relativePath: { eq: "logo.png" }) {
+        file(relativePath: { eq: "logo/logo.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid

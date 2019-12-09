@@ -16,6 +16,7 @@ const Banner = () => {
       }
     }
   `)
+
   return (
     <div className="container">
       {/* <div className="row">
@@ -30,23 +31,13 @@ const Banner = () => {
           />
         </div>
         <div className="col align-self-center">
-          <h3>
-            Fancy display heading
-            <small className="text-muted"> With faded secondary</small>
-          </h3>
+          <h3>Here at Cafelina</h3>
           <p className="lead">
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor. Duis mollis, est non commodo luctus.
+            Our seasonal menu features delicious snacks, baked goods, and even
+            full meals perfect for breakfast or lunchtime. We source our
+            ingredients from local, oragnic farms whenever possible, alongside
+            premium vendors for specialty goods.
           </p>
-          <blockquote className="blockquote">
-            <p className="mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              posuere erat a ante.
-            </p>
-            <footer className="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </footer>
-          </blockquote>
         </div>
       </div>
     </div>

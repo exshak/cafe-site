@@ -1,3 +1,13 @@
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 /* Universal Box Sizing with Inheritance */
 html {
   box-sizing: border-box;
@@ -24,12 +34,15 @@ nav {
 }
 /* Background */
 main {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .background-slider {
   height: 45vh;
-  min-height: 610px;
+  min-height: 600px;
   position: relative;
+}
+.smooth-scroll {
+  animation: moveInTop 1s ease-out;
 }
 /* Contact */
 .maps-info-window {

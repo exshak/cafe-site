@@ -6,7 +6,7 @@ import { SliderText } from '../Common/SliderText'
 const BackgroundSliders = () => {
   const data = useStaticQuery(
     graphql`
-      query BackgroundSlider {
+      query BackgroundSliders {
         backgrounds: allFile(
           filter: { relativeDirectory: { eq: "backgrounds" } }
         ) {
@@ -31,15 +31,15 @@ const BackgroundSliders = () => {
   )
 
   return (
-    <div className="background-slider">
-      <BackgroundSlider query={data}>
+    <section className="background-slider">
+      <BackgroundSlider query={data} initDelay={4} transition={4} duration={8}>
         <SliderText />
         <SliderText />
         <SliderText />
         <SliderText />
         <SliderText />
       </BackgroundSlider>
-    </div>
+    </section>
   )
 }
 

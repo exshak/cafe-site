@@ -2,9 +2,13 @@ import classnames from 'classnames'
 import { Link } from 'gatsby'
 import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
+import { SiteLogo } from '../Common/SiteLogo'
 
-export const NavBar = ({ isCollapsed, toggleCollapse }) => (
-  <>
+export const NavBar = ({ siteTitle, isCollapsed, toggleCollapse }) => (
+  <div className="container">
+    <Link to="/" className="navbar-brand">
+      <SiteLogo logoWidth={150} logoAlt={siteTitle} />
+    </Link>
     <button
       className="navbar-toggler"
       type="button"
@@ -48,5 +52,5 @@ export const NavBar = ({ isCollapsed, toggleCollapse }) => (
         </li>
       </ul>
     </div>
-  </>
+  </div>
 )

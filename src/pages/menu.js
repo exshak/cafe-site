@@ -1,15 +1,15 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import BackgroundAbout from '../components/About/BackgroundAbout'
 import Layout from '../components/Layout'
 import Menu from '../components/menu/Menu'
-import SideNav from '../components/menu/Sidenav'
 import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Menu" />
-    <SideNav category={data.menu} />
-    <Menu items={data.menu} />
+    <BackgroundAbout />
+    <Menu items={data} />
   </Layout>
 )
 
@@ -31,6 +31,21 @@ export const query = graphql`
           image {
             fixed(width: 100, height: 100) {
               ...GatsbyContentfulFixed
+            }
+          }
+        }
+      }
+    }
+    pics: allFile(
+      filter: {
+        relativePath: { eq: "images/drew-coffman-Dt9kdskj6ek-unsplash.jpg" }
+      }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 110, height: 110) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

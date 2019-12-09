@@ -3,44 +3,41 @@ import Image from 'gatsby-image'
 import React from 'react'
 import Layout from '../components/Layout'
 
-// NOTE: destructure node to keys
-
 export default ({ data }) => {
-  const { node } = data.allContentfulCafeDrinks.edges[0]
+  const {
+    node: { id, title, type, price, image },
+  } = data.allContentfulCafeDrinks.edges[0]
   return (
     <Layout>
-      <h1>{node.type}</h1>
-      <div
-        style={{
-          display: `flex`,
-        }}
-      >
-        <Image
-          fixed={node.image.fixed}
-          style={{
-            borderRadius: `50%`,
-          }}
-        />
-        <h1
-          style={{
-            margin: `20px`,
-          }}
-        >
-          {node.title}
-        </h1>
-        <button
-          className="snipcart-add-item"
-          data-item-id={node.id}
-          data-item-name={node.title}
-          data-item-price={node.price}
-          data-item-image={node.image.fixed.src}
-          data-item-url="https://gatsby-coffee-project.netlify.com/"
-          style={{
-            width: `100px`,
-          }}
-        >
-          {node.price}
-        </button>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-6 mx-auto text-center">
+            {/* <h1>{type}</h1> */}
+            <Image
+              fixed={image.fixed}
+              style={{
+                borderRadius: `50%`,
+              }}
+            />
+            <h1
+              style={{
+                margin: `20px`,
+              }}
+            >
+              {title}
+            </h1>
+            <button
+              className="btn btn-dark snipcart-add-item"
+              data-item-id={id}
+              data-item-name={title}
+              data-item-price={price}
+              data-item-image={image.fixed.src}
+              data-item-url="https://gatsby-coffee-project.netlify.com/"
+            >
+              {price}
+            </button>
+          </div>
+        </div>
       </div>
     </Layout>
   )

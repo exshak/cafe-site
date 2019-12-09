@@ -118,7 +118,7 @@ const About = () => {
             </div>
           </div>
         </article>
-        <article>
+        {/* <article>
           <hr className="hr-dark my-5" />
           <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
             <strong>more info</strong>
@@ -176,7 +176,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </article>
+        </article> */}
         <article>
           <hr className="hr-dark my-5" />
           <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">

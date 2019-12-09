@@ -10,11 +10,9 @@ export const SliderText = () => (
           <em>Cafelina</em>
         </h1>
         <hr className="hr-light" />
-        <h5 className="text-uppercase font-weight-bold spacing">
-          Cafe & Bakery
-        </h5>
+        <h5 className="text-uppercase font-weight-bold">Cafe & Bakery</h5>
         <div className="my-5">
-          <Link to="/menu" className="btn btn-outline-light">
+          <Link to="/menu" className="btn btn-outline-light font-weight-bold">
             Menu
           </Link>
         </div>

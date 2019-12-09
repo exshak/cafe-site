@@ -1,8 +1,6 @@
 import classnames from 'classnames'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import { SiteLogo } from '../Common/SiteLogo'
 import { NavBar } from './NavBar'
 
 const Header = ({ siteTitle }) => {
@@ -37,15 +35,11 @@ const Header = ({ siteTitle }) => {
           navbarColor
         )}
       >
-        <div className="container">
-          <Link to="/" className="navbar-brand">
-            <SiteLogo logoWidth={150} logoAlt={siteTitle} />
-          </Link>
-          <NavBar
-            isCollapsed={navbarCollapse}
-            toggleCollapse={toggleNavbarCollapse}
-          />
-        </div>
+        <NavBar
+          siteTitle={siteTitle}
+          isCollapsed={navbarCollapse}
+          toggleCollapse={toggleNavbarCollapse}
+        />
       </nav>
     </header>
   )

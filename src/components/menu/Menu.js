@@ -11,16 +11,16 @@ const Menu = props => (
       </div>
     </div>
     <div className="row">
-      <div className="col-md-2">
+      <div className="col-md-3 d-none d-sm-block">
         <SideNav category={props.items.menu} />
       </div>
-      <div className="col-md-10">
+      <div className="col-md-9">
         <hr />
         <div className="row">
           {props.items.menu.distinct.map(category => (
-            <div className="col-md-6 py-3">
+            <div className="col-lg-6 py-3">
               <div className="row">
-                <div className="col-3">
+                <div className="col-4">
                   <Image
                     fixed={props.items.pics.edges[0].node.childImageSharp.fixed}
                     style={{

@@ -15,10 +15,10 @@ export default ({ data, pageContext, path }) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-3 d-none d-sm-block">
             <Sidenav category={drinks} />
           </div>
-          <div className="col-md-10">
+          <div className="col-md-9">
             <div className="row">
               {drinks.distinct.map(type => (
                 <SubCategory type={type} drinks={drinks} path={path} />

@@ -41,7 +41,7 @@ main {
   min-height: 600px;
   position: relative;
 }
-.smooth-scroll {
+.scroll-top {
   animation: moveInTop 1s ease-out;
 }
 /* Contact */

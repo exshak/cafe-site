@@ -3,7 +3,7 @@ import React from 'react'
 
 export const SliderText = () => (
   <div className="container-fluid h-100 d-flex justify-content-center align-items-center position-absolute">
-    <div className="row smooth-scroll">
+    <div className="row scroll-top">
       <div className="col-md-12 text-center text-white">
         <hr className="hr-light" />
         <h1 className="display-4 font-weight-bold">

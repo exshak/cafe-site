@@ -5,7 +5,7 @@ import { InfoBar } from './InfoBar'
 
 const Footer = ({ siteTitle, siteAuthor }) => (
   <footer id="footer">
-    <InfoBar siteTitle={siteTitle} />
+    <InfoBar />
     <div className="container px-5 py-3">
       <div className="row">
         <div className="col-md-6 footer-copyright">
@@ -25,8 +25,8 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-  siteTitle: ``,
-  siteAuthor: ``,
+  siteTitle: '',
+  siteAuthor: '',
 }
 
 export default Footer

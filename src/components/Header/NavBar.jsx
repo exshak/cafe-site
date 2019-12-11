@@ -4,10 +4,10 @@ import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import { SiteLogo } from '../Common/SiteLogo'
 
-export const NavBar = ({ siteTitle, isCollapsed, toggleCollapse }) => (
+export const NavBar = ({ isCollapsed, toggleCollapse }) => (
   <div className="container">
     <Link to="/" className="navbar-brand">
-      <SiteLogo logoWidth={150} logoAlt={siteTitle} />
+      <SiteLogo logoWidth={150} />
     </Link>
     <button
       className="navbar-toggler"
@@ -20,7 +20,7 @@ export const NavBar = ({ siteTitle, isCollapsed, toggleCollapse }) => (
     <div
       className={classnames('collapse navbar-collapse', isCollapsed && 'show')}
     >
-      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0 font-weight-bold">
         <li className="nav-item">
           <Link to="/" className="nav-link" activeClassName="active">
             Home

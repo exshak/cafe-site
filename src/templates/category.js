@@ -1,56 +1,54 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import BackgroundSections from '../components/Common/BackgroundSections'
 import Layout from '../components/Layout'
-import Sidenav from '../components/menu/SideNav'
+import { MenuContainer } from '../components/menu/MenuContainer'
 import SubCategory from '../components/menu/SubCategory'
 
-export default ({ data, pageContext, path }) => {
-  const drinks = data.allContentfulCafeDrinks
-  return (
-    <Layout>
-      <div className="container py-5">
-        <div className="row">
-          <div className="col text-center">
-            <h1>{pageContext.category}</h1>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-3 d-none d-sm-block">
-            <Sidenav category={drinks} />
-          </div>
-          <div className="col-md-9">
-            <div className="row">
-              {drinks.distinct.map(type => (
-                <SubCategory type={type} drinks={drinks} path={path} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
-}
+export default ({ pageContext, data, path }) => (
+  <Layout>
+    <BackgroundSections
+      data={data}
+      title={pageContext.category}
+      className="menu-image"
+    />
+    <MenuContainer title={pageContext.category}>
+      {data.drinks.distinct.map(type => (
+        <SubCategory
+          key={type}
+          drinkType={type}
+          drinks={data.drinks}
+          path={path}
+        />
+      ))}
+    </MenuContainer>
+  </Layout>
+)
 
 export const query = graphql`
   query($category: String!) {
-    allContentfulCafeDrinks(filter: { category: { eq: $category } }) {
+    drinks: allContentfulCafeDrinks(filter: { category: { eq: $category } }) {
       distinct(field: type)
       edges {
         node {
           id
           title
-          category
           type
           slug
-          description {
-            description
-          }
-          price
           image {
-            fixed(width: 120, height: 120) {
+            fixed(width: 140, height: 140) {
               ...GatsbyContentfulFixed
             }
           }
+        }
+      }
+    }
+    desktop: file(
+      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

@@ -13,7 +13,7 @@ const BackgroundSliders = () => {
           nodes {
             childImageSharp {
               fluid(
-                quality: 90
+                quality: 100
                 maxWidth: 1920
                 duotone: {
                   highlight: "#000000"

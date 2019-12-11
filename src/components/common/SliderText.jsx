@@ -12,7 +12,7 @@ export const SliderText = () => (
         <hr className="hr-light" />
         <h5 className="text-uppercase font-weight-bold">Cafe & Bakery</h5>
         <div className="my-5">
-          <Link to="/menu" className="btn btn-outline-light font-weight-bold">
+          <Link to="/menu" className="btn btn-light font-weight-bold">
             Menu
           </Link>
         </div>

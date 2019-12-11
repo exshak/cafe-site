@@ -57,18 +57,18 @@ const About = () => {
           </div>
         </article>
         <article>
-          <hr className="hr-dark my-5" />
-          <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
+          <hr className="my-5" />
+          <h5 className="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
             <strong>us</strong>
           </h5>
-          <div class="row">
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+          <div className="row">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <TiLeaf />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Organic</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Every cup of our quality artisan coffee starts with locally
                   sourced, hand picked ingredients. Once you try it, our coffee
                   will be a blissful addition to your everyday morning routine -
@@ -76,13 +76,13 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <GiCoffeeBeans />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Roasted</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   When you walk into our shop to start your day, we are
                   dedicated to providing you with friendly service, a welcoming
                   atmosphere, and above all else, excellent products made with
@@ -92,18 +92,18 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <FaShoppingBag
                 // style={{
                 //   height: `40px`,
                 //   width: `40px`,
                 // }}
                 />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Fairtrade</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Founded in 1987 by the Hernandez brothers, our establishment
                   has been serving up rich coffee sourced from artisan farmers
                   in various regions of South and Central America. We are
@@ -120,17 +120,17 @@ const About = () => {
         </article>
         {/* <article>
           <hr className="hr-dark my-5" />
-          <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
+          <h5 className="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
             <strong>more info</strong>
           </h5>
-          <div class="row">
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+          <div className="row">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <TiLeaf />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Organic</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   We take pride in our work, and it shows. Every time you order
                   a beverage from us, we guarantee that it will be an experience
                   worth having. Whether it's our world famous Venezuelan
@@ -140,13 +140,13 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <GiCoffeeBeans />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Roasted</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Our seasonal menu features delicious snacks, baked goods, and
                   even full meals perfect for breakfast or lunchtime. We source
                   our ingredients from local, oragnic farms whenever possible,
@@ -154,18 +154,18 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <FaShoppingBag
                 // style={{
                 //   height: `40px`,
                 //   width: `40px`,
                 // }}
                 />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Fairtrade</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Travelling the world for the very best quality coffee is
                   something take pride in. When you visit us, you'll always find
                   new blends from around the world, mainly from regions in
@@ -178,49 +178,49 @@ const About = () => {
           </div>
         </article> */}
         <article>
-          <hr className="hr-dark my-5" />
-          <h5 class="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
+          <hr className="my-5" />
+          <h5 className="text-center dark-grey-text text-uppercase font-weight-bold spacing my-5 pt-2 pb-4">
             <strong>our products</strong>
           </h5>
-          <div class="row">
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+          <div className="row">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <TiLeaf />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Organic</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Completely pesticide and herbicide free, with industry tests
                   done regularly to keep every batch of coffee as pure as
                   possible. Lorem ipsum dolor sit amet
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <GiCoffeeBeans />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Roasted</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   The perfect blend of full flavor roasting along with the best
                   quality beans in the industry provides for great tasting
                   coffee everytime.
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-              <div class="card card-body rgba-white-light hoverable">
+            <div className="col-md-4 mb-4 text-center">
+              <div className="card card-body rgba-white-light hoverable">
                 <FaShoppingBag
                 // style={{
                 //   height: `40px`,
                 //   width: `40px`,
                 // }}
                 />
-                <p class="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
+                <p className="font-weight-bold font-weight-bold dark-grey-text text-uppercase spacing">
                   <strong>Fairtrade</strong>
                 </p>
-                <p class="dark-grey-text font-small">
+                <p className="dark-grey-text font-small">
                   Following North American fairtrade practices to provide the
                   most ethical coffee beans, which helps to give back to farmers
                   across the world.

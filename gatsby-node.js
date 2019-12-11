@@ -35,7 +35,7 @@ exports.createPages = async ({
 
     // Create categories pages
     createPage({
-      path: category,
+      path: `menu/${category}`,
       component: categoryTemplate,
       context: {
         category: node.category,
@@ -44,7 +44,7 @@ exports.createPages = async ({
 
     // Create products pages
     createPage({
-      path: `${category}/${node.slug}`,
+      path: `menu/${category}/${node.slug}`,
       component: productTemplate,
       context: {
         slug: node.slug,

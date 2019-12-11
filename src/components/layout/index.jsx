@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={title} />
+      <Header />
       <main id="content">{children}</main>
       <Footer siteTitle={title} siteAuthor={author} />
     </>

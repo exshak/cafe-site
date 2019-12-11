@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import BackgroundAbout from '../components/About/BackgroundAbout'
+import BackgroundSections from '../components/Common/BackgroundSections'
 import Layout from '../components/Layout'
 import Menu from '../components/menu/Menu'
 import SEO from '../components/SEO'
@@ -8,35 +8,26 @@ import SEO from '../components/SEO'
 export default ({ data }) => (
   <Layout>
     <SEO title="Menu" />
-    <BackgroundAbout />
-    <Menu items={data} />
+    <BackgroundSections data={data} title="Menu" className="menu-image" />
+    <Menu menu={data} />
   </Layout>
 )
 
 export const query = graphql`
-  {
-    menu: allContentfulCafeDrinks {
+  query {
+    categories: allContentfulCafeDrinks {
       distinct(field: category)
-      edges {
-        node {
-          id
-          title
-          category
-          type
-          slug
-          description {
-            description
-          }
-          price
-          image {
-            fixed(width: 100, height: 100) {
-              ...GatsbyContentfulFixed
-            }
-          }
+    }
+    desktop: file(
+      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    pics: allFile(
+    pictures: allFile(
       filter: {
         relativePath: { eq: "images/drew-coffman-Dt9kdskj6ek-unsplash.jpg" }
       }
@@ -44,7 +35,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fixed(width: 110, height: 110) {
+            fixed(width: 120, height: 120) {
               ...GatsbyImageSharpFixed
             }
           }

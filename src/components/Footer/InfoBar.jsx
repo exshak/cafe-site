@@ -2,13 +2,13 @@ import React from 'react'
 import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import { SiteLogo } from '../Common/SiteLogo'
 
-export const InfoBar = ({ siteTitle }) => (
+export const InfoBar = () => (
   <div className="container">
     <hr />
     <div className="row">
       <div className="col-md-6 text-center mx-auto">
         <div className="info-logo py-3">
-          <SiteLogo logoWidth={300} logoAlt={siteTitle} />
+          <SiteLogo logoWidth={300} />
         </div>
         <p className="py-3">
           Travelling the world for the very best quality coffee is something we

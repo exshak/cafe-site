@@ -10,6 +10,7 @@
 }
 /* Universal Box Sizing with Inheritance */
 html {
+  /* background-color: #f7f7f7; */
   box-sizing: border-box;
   /* color: #3a3a3a; */
 }
@@ -34,15 +35,24 @@ nav {
 }
 /* Background */
 main {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .background-slider {
   height: 45vh;
   min-height: 600px;
   position: relative;
 }
+.seasonal-image {
+  height: 25vh;
+  margin-bottom: 3rem;
+  min-height: 350px;
+}
 .scroll-top {
   animation: moveInTop 1s ease-out;
+}
+.menu-image {
+  height: 25vh;
+  min-height: 350px;
 }
 /* Contact */
 .maps-info-window {

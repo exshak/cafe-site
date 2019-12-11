@@ -1,67 +1,75 @@
-import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import React from 'react'
+import BackgroundSections from '../components/Common/BackgroundSections'
 import Layout from '../components/Layout'
+import { MenuContainer } from '../components/menu/MenuContainer'
 
 export default ({ data }) => {
   const {
-    node: { id, title, type, price, image },
-  } = data.allContentfulCafeDrinks.edges[0]
+    node: { id, title, category, type, price, image },
+  } = data.drink.edges[0]
+
   return (
     <Layout>
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-md-6 mx-auto text-center">
-            {/* <h1>{type}</h1> */}
-            <Image
-              fixed={image.fixed}
-              style={{
-                borderRadius: `50%`,
-              }}
-            />
-            <h1
-              style={{
-                margin: `20px`,
-              }}
-            >
-              {title}
-            </h1>
-            <button
-              className="btn btn-dark snipcart-add-item"
-              data-item-id={id}
-              data-item-name={title}
-              data-item-price={price}
-              data-item-image={image.fixed.src}
-              data-item-url="https://gatsby-coffee-project.netlify.com/"
-            >
-              {price}
-            </button>
+      <BackgroundSections data={data} title={type} className="menu-image" />
+      <MenuContainer title={category} type={type}>
+        <div className="col-md-12">
+          <hr />
+          <div className="row pt-3">
+            <div className="col-md-2" />
+            <div className="col-md-6 text-center">
+              <Image
+                fixed={image.fixed}
+                style={{
+                  borderRadius: `50%`,
+                }}
+              />
+              <h3 className="py-3">{title}</h3>
+              <button
+                className="btn btn-dark snipcart-add-item"
+                data-item-id={id}
+                data-item-name={title}
+                data-item-price={price}
+                data-item-image={image.fixed.src}
+                data-item-url="https://cafe-site.netlify.com/"
+              >
+                {'$' + price}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </MenuContainer>
     </Layout>
   )
 }
 
 export const query = graphql`
   query($slug: String!) {
-    allContentfulCafeDrinks(filter: { slug: { eq: $slug } }) {
+    drink: allContentfulCafeDrinks(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           id
           title
           category
           type
-          slug
           description {
             description
           }
           price
           image {
-            fixed(width: 100, height: 100) {
+            fixed(width: 200, height: 200) {
               ...GatsbyContentfulFixed
             }
           }
+        }
+      }
+    }
+    desktop: file(
+      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

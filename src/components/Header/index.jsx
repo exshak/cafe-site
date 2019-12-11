@@ -1,9 +1,8 @@
 import classnames from 'classnames'
-import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import { NavBar } from './NavBar'
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [navbarColor, setNavbarColor] = useState('py-2')
   const [navbarCollapse, setNavbarCollapse] = useState(false)
 
@@ -36,21 +35,12 @@ const Header = ({ siteTitle }) => {
         )}
       >
         <NavBar
-          siteTitle={siteTitle}
           isCollapsed={navbarCollapse}
           toggleCollapse={toggleNavbarCollapse}
         />
       </nav>
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

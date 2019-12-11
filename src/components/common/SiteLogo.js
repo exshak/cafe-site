@@ -2,9 +2,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { SiteMetadata } from './SiteMetadata'
 
-export const SiteLogo = ({ logoWidth, logoAlt }) => {
-  const data = useStaticQuery(
+export const SiteLogo = ({ logoWidth }) => {
+  const { title } = SiteMetadata()
+
+  const { file } = useStaticQuery(
     graphql`
       query SiteLogo {
         file(relativePath: { eq: "logo/logo.png" }) {
@@ -20,19 +23,17 @@ export const SiteLogo = ({ logoWidth, logoAlt }) => {
 
   return (
     <Image
-      fluid={data.file.childImageSharp.fluid}
+      fluid={file.childImageSharp.fluid}
       style={{ width: logoWidth }}
-      alt={logoAlt}
+      alt={title}
     />
   )
 }
 
 SiteLogo.propTypes = {
   logoWidth: PropTypes.number,
-  logoAlt: PropTypes.string,
 }
 
 SiteLogo.defaultProps = {
   logoWidth: 500,
-  logoAlt: ``,
 }

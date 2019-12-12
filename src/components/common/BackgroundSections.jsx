@@ -9,7 +9,7 @@ const BackgroundSections = ({ data, title, className }) => {
 
   const imageData = [
     data.desktop.childImageSharp.fluid,
-    `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
+    `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`,
   ].reverse()
 
   return (

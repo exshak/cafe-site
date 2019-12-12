@@ -23,7 +23,7 @@ export const ContactInfo = () => (
           </p>
         </li>
       </ul>
-      <hr className="hr-light my-4" />
+      <hr className="bg-light my-4" />
       <SocialLinks />
     </div>
   </div>

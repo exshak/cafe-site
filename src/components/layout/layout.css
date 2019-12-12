@@ -10,14 +10,17 @@
 }
 /* Universal Box Sizing with Inheritance */
 html {
-  /* background-color: #f7f7f7; */
   box-sizing: border-box;
-  /* color: #3a3a3a; */
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+/* Body */
+body {
+  background-color: #f7f7f7;
+  color: #3a3a3a;
 }
 /* Header */
 nav {
@@ -33,15 +36,17 @@ nav {
 .footer-socials a {
   color: black;
 }
-/* Background */
+/* Background Image */
 main {
   margin-top: 50px;
 }
+.background-image,
 .background-slider {
   height: 45vh;
   min-height: 600px;
   position: relative;
 }
+.menu-image,
 .seasonal-image {
   height: 25vh;
   margin-bottom: 3rem;
@@ -49,10 +54,6 @@ main {
 }
 .scroll-top {
   animation: moveInTop 1s ease-out;
-}
-.menu-image {
-  height: 25vh;
-  min-height: 350px;
 }
 /* Contact */
 .maps-info-window {
@@ -118,27 +119,8 @@ main {
   height: 20px;
   width: 20px;
 }
-.hr-light {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, #ccc, #fff, #ccc);
-}
-.background-image {
-  width: 100%;
-  height: 45vh;
-  min-height: 610px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .z-depth-1-half {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
-}
-.hr-dark {
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 .hoverable {
   transition: all 0.55s ease-in-out;

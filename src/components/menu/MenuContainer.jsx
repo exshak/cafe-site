@@ -3,8 +3,8 @@ import React from 'react'
 import SideNav from './SideNav'
 
 export const MenuContainer = ({ title, type, children }) => (
-  <div className="container py-5">
-    <div className="row pt-3">
+  <div className="container">
+    <div className="row">
       <div className="col-md-3 d-none d-sm-block">
         <SideNav />
       </div>

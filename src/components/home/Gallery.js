@@ -31,10 +31,14 @@ const Gallery = () => {
   )
   const [gallery, setGallery] = useState(all)
 
+  const variables = {
+    all,
+    cafe,
+  }
+
   const handleChange = e => {
     const directory = e.target.value
-    console.log(e.target.value)
-    setGallery(directory)
+    typeof directory === 'string' && setGallery(variables[directory])
   }
 
   return (
@@ -44,9 +48,17 @@ const Gallery = () => {
           <div className="col-md-12 d-flex justify-content-center mb-5">
             <div className="row text-center">
               <div className="col">
-                <button type="button" value="all" onClick={handleChange}>
+                <button
+                  type="button"
+                  value="all"
+                  onClick={handleChange}
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 0,
+                    outlineColor: 'transparent',
+                  }}
+                >
                   <FiGrid
-                    className="mx-3"
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
                   <hr />
@@ -54,9 +66,17 @@ const Gallery = () => {
                 </button>
               </div>
               <div className="col">
-                <button type="button" value="cafe" onClick={handleChange}>
+                <button
+                  type="button"
+                  value="cafe"
+                  onClick={handleChange}
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 0,
+                    outlineColor: 'transparent',
+                  }}
+                >
                   <GiCoffeeCup
-                    className="mx-3"
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
                   <hr />
@@ -64,9 +84,17 @@ const Gallery = () => {
                 </button>
               </div>
               <div className="col">
-                <button type="button" value="baked" onClick={handleChange}>
+                <button
+                  type="button"
+                  value="baked"
+                  onClick={handleChange}
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 0,
+                    outlineColor: 'transparent',
+                  }}
+                >
                   <GiSlicedBread
-                    className="mx-3"
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
                   <hr />
@@ -74,9 +102,17 @@ const Gallery = () => {
                 </button>
               </div>
               <div className="col">
-                <button type="button" value="deserts" onClick={handleChange}>
+                <button
+                  type="button"
+                  value="deserts"
+                  onClick={handleChange}
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 0,
+                    outlineColor: 'transparent',
+                  }}
+                >
                   <GiCakeSlice
-                    className="mx-3"
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
                   <hr />

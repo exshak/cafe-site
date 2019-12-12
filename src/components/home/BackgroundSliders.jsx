@@ -18,7 +18,7 @@ const BackgroundSliders = () => {
                 duotone: {
                   highlight: "#000000"
                   shadow: "#000000"
-                  opacity: 20
+                  opacity: 30
                 }
               ) {
                 ...GatsbyImageSharpFluid_withWebp

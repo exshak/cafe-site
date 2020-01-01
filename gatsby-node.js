@@ -1,4 +1,4 @@
-const path = require(`path`)
+const path = require('path')
 
 // createPages is called once the data layer is bootstrapped to create pages from data.
 exports.createPages = async ({
@@ -6,8 +6,8 @@ exports.createPages = async ({
   graphql,
   reporter,
 }) => {
-  const categoryTemplate = path.resolve(`src/templates/category.js`)
-  const productTemplate = path.resolve(`src/templates/product.js`)
+  const categoryTemplate = path.resolve('src/templates/category.js')
+  const productTemplate = path.resolve('src/templates/product.js')
 
   // Query for all categories and products
   const { data, errors } = await graphql(`
@@ -25,7 +25,7 @@ exports.createPages = async ({
 
   // Handle errors
   if (errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild('Error while running GraphQL query.')
     return
   }
 

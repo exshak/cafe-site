@@ -1,34 +1,33 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import React, { useState } from 'react'
 import { FiGrid } from 'react-icons/fi'
 import { GiCakeSlice, GiCoffeeCup, GiSlicedBread } from 'react-icons/gi'
 
 const Gallery = () => {
-  const { all, cafe } = useStaticQuery(
-    graphql`
-      query Gallery {
-        all: allFile(filter: { relativeDirectory: { eq: "backgrounds" } }) {
-          nodes {
-            childImageSharp {
-              fluid(quality: 100, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        cafe: allFile(filter: { relativeDirectory: { eq: "images" } }) {
-          nodes {
-            childImageSharp {
-              fluid(quality: 100, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+  const { all, cafe } = useStaticQuery(graphql`
+    query Gallery {
+      all: allFile(filter: { relativeDirectory: { eq: "backgrounds" } }) {
+        nodes {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       }
-    `
-  )
+      cafe: allFile(filter: { relativeDirectory: { eq: "images" } }) {
+        nodes {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  `)
+
   const [gallery, setGallery] = useState(all)
 
   const variables = {
@@ -45,9 +44,9 @@ const Gallery = () => {
     <div className="container my-5">
       <section id="gallery">
         <div className="row">
-          <div className="col-md-12 d-flex justify-content-center mb-5">
-            <div className="row text-center">
-              <div className="col">
+          <div className="col-md-12 d-flex mb-5">
+            <div className="row text-center" style={{ display: 'contents' }}>
+              <div className="col d-flex justify-content-center">
                 <button
                   type="button"
                   value="all"
@@ -61,11 +60,11 @@ const Gallery = () => {
                   <FiGrid
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
-                  <hr />
+                  <br />
                   All
                 </button>
               </div>
-              <div className="col">
+              <div className="col d-flex justify-content-center">
                 <button
                   type="button"
                   value="cafe"
@@ -79,11 +78,11 @@ const Gallery = () => {
                   <GiCoffeeCup
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
-                  <hr />
+                  <br />
                   Cafe
                 </button>
               </div>
-              <div className="col">
+              <div className="col d-flex justify-content-center">
                 <button
                   type="button"
                   value="baked"
@@ -97,11 +96,11 @@ const Gallery = () => {
                   <GiSlicedBread
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
-                  <hr />
+                  <br />
                   Baked
                 </button>
               </div>
-              <div className="col">
+              <div className="col d-flex justify-content-center">
                 <button
                   type="button"
                   value="deserts"
@@ -115,7 +114,7 @@ const Gallery = () => {
                   <GiCakeSlice
                     style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
                   />
-                  <hr />
+                  <br />
                   Deserts
                 </button>
               </div>
@@ -126,10 +125,10 @@ const Gallery = () => {
           {gallery.nodes.map(({ childImageSharp: { fluid } }) => (
             <figure key={fluid.src} className="col-md-4 my-3">
               <a href={fluid.src}>
-                <Image
+                <Img
                   fluid={fluid}
                   alt="picture"
-                  className="z-depth-1-half"
+                  className="half-shadow"
                   style={{ maxHeight: '190px' }}
                 />
               </a>

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { SiteMetadata } from '../Common/SiteMetadata'
-import Footer from '../Footer'
-import Header from '../Header'
+import { SiteMetadata } from '../common/siteMetadata'
+import Footer from '../footer'
+import Header from '../header'
 import './bootstrap.min.css'
 import './layout.css'
 

@@ -1,6 +1,6 @@
 import classnames from 'classnames'
 import React, { useEffect, useState } from 'react'
-import { NavBar } from './NavBar'
+import NavBar from './navBar'
 
 const Header = () => {
   const [navbarColor, setNavbarColor] = useState('py-2')
@@ -24,7 +24,7 @@ const Header = () => {
     return function cleanup() {
       window.removeEventListener('scroll', updateNavbarColor)
     }
-  })
+  }, [])
 
   return (
     <header id="header">

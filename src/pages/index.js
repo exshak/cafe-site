@@ -1,18 +1,19 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import BackgroundSections from '../components/Common/BackgroundSections'
-import BackgroundSliders from '../components/Home/BackgroundSliders'
-import Banner from '../components/home/Banner'
-import Gallery from '../components/Home/Gallery'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import About from '../components/about'
+import BackgroundSection from '../components/common/backgroundSection'
+import BackgroundSliders from '../components/home/backgroundSliders'
+import Gallery from '../components/home/gallery'
+import Layout from '../components/layout'
+import SEO from '../components/layout/seo'
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <BackgroundSliders />
-    <Banner />
-    <BackgroundSections
+    {/* <Banner /> */}
+    <About />
+    <BackgroundSection
       data={data}
       title="Seasonal Drinks"
       className="seasonal-image"
@@ -23,11 +24,11 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    desktop: file(
-      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    background: file(
+      relativePath: { eq: "about/tony-lee-8IKf54pc3qk-unsplash.jpg" }
     ) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

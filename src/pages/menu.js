@@ -1,14 +1,14 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import BackgroundSections from '../components/Common/BackgroundSections'
-import Layout from '../components/Layout'
+import BackgroundSection from '../components/common/backgroundSection'
+import Layout from '../components/layout'
+import SEO from '../components/layout/seo'
 import Menu from '../components/menu/Menu'
-import SEO from '../components/SEO'
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Menu" />
-    <BackgroundSections data={data} title="Menu" className="menu-image" />
+    <BackgroundSection data={data} title="Menu" className="menu-image" />
     <Menu menu={data} />
   </Layout>
 )
@@ -18,11 +18,11 @@ export const query = graphql`
     categories: allContentfulCafeDrinks {
       distinct(field: category)
     }
-    desktop: file(
-      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    background: file(
+      relativePath: { eq: "menu/interior-of-a-restaurant-3465604.jpg" }
     ) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

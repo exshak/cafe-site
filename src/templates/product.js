@@ -1,7 +1,8 @@
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import React from 'react'
-import BackgroundSections from '../components/Common/BackgroundSections'
-import Layout from '../components/Layout'
+import BackgroundSection from '../components/common/backgroundSection'
+import Layout from '../components/layout'
+import SEO from '../components/layout/seo'
 import { MenuContainer } from '../components/menu/MenuContainer'
 
 export default ({ data }) => {
@@ -11,14 +12,15 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <BackgroundSections data={data} title={type} className="menu-image" />
+      <SEO title="" />
+      <BackgroundSection data={data} title={type} className="menu-image" />
       <MenuContainer title={category} type={type}>
         <div className="col-md-12">
           <hr />
           <div className="row pt-3">
             <div className="col-md-2" />
             <div className="col-md-6 text-center">
-              <Image
+              <Img
                 fixed={image.fixed}
                 style={{
                   borderRadius: `50%`,
@@ -64,11 +66,11 @@ export const query = graphql`
         }
       }
     }
-    desktop: file(
-      relativePath: { eq: "backgrounds/tony-lee-8IKf54pc3qk-unsplash.jpg" }
+    background: file(
+      relativePath: { eq: "menu/interior-of-a-restaurant-3465604.jpg" }
     ) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

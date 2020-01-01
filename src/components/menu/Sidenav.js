@@ -2,15 +2,13 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 const SideNav = () => {
-  const { categories } = useStaticQuery(
-    graphql`
-      query SideNav {
-        categories: allContentfulCafeDrinks {
-          distinct(field: category)
-        }
+  const { categories } = useStaticQuery(graphql`
+    query SideNav {
+      categories: allContentfulCafeDrinks {
+        distinct(field: category)
       }
-    `
-  )
+    }
+  `)
 
   return (
     <ul className="nav flex-column">

@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import React from 'react'
 import { MenuContainer } from './MenuContainer'
 
@@ -16,7 +16,7 @@ const Menu = ({ menu }) => (
         >
           <div className="row">
             <div className="col-md-4">
-              <Image
+              <Img
                 fixed={menu.pictures.edges[0].node.childImageSharp.fixed}
                 style={{
                   borderRadius: '50%',

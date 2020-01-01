@@ -1,22 +1,44 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { SiteMetadata } from './siteMetadata'
 
-export const SocialLinks = () => (
-  <ul className="list-inline list-unstyled">
-    <li className="list-inline-item">
-      <a href="/" className="list-social p-2">
-        <FaTwitter className="list-social-icon" />
-      </a>
-    </li>
-    <li className="list-inline-item">
-      <a href="/" className="list-social p-2">
-        <FaFacebookF className="list-social-icon" />
-      </a>
-    </li>
-    <li className="list-inline-item">
-      <a href="/" className="list-social p-2">
-        <FaInstagram className="list-social-icon" />
-      </a>
-    </li>
-  </ul>
-)
+const SocialLinks = () => {
+  const { social } = SiteMetadata()
+
+  return (
+    <ul className="list-inline list-unstyled">
+      <li className="list-inline-item">
+        <a
+          href={social.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="list-social p-2"
+        >
+          <FaTwitter className="list-social-icon" />
+        </a>
+      </li>
+      <li className="list-inline-item">
+        <a
+          href={social.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="list-social p-2"
+        >
+          <FaFacebookF className="list-social-icon" />
+        </a>
+      </li>
+      <li className="list-inline-item">
+        <a
+          href={social.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="list-social p-2"
+        >
+          <FaInstagram className="list-social-icon" />
+        </a>
+      </li>
+    </ul>
+  )
+}
+
+export default SocialLinks

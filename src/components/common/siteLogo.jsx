@@ -9,7 +9,7 @@ const SiteLogo = ({ width }) => {
 
   const { file } = useStaticQuery(graphql`
     query SiteLogo {
-      file(relativePath: { eq: "logo/logo.png" }) {
+      file(relativePath: { eq: "icons/logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

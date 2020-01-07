@@ -6,12 +6,12 @@ import { GiCoffeeBeans } from 'react-icons/gi'
 import { TiLeaf } from 'react-icons/ti'
 import { SiteMetadata } from '../common/siteMetadata'
 
-const About = () => {
+const AboutSection = () => {
   const { title, slogan } = SiteMetadata()
 
   const { file } = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/ba.jpg" }) {
+    query AboutSection {
+      file(relativePath: { eq: "images/about-info.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -116,4 +116,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutSection

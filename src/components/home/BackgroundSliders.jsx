@@ -6,8 +6,11 @@ import SliderText from '../common/sliderText'
 const BackgroundSliders = () => {
   const data = useStaticQuery(graphql`
     query BackgroundSliders {
-      backgrounds: allFile(filter: { relativeDirectory: { eq: "home" } }) {
+      backgrounds: allFile(
+        filter: { relativeDirectory: { eq: "backgrounds" } }
+      ) {
         nodes {
+          relativePath
           childImageSharp {
             fluid(
               quality: 80
@@ -23,8 +26,20 @@ const BackgroundSliders = () => {
   `)
 
   return (
-    <section className="background-slider">
-      <BackgroundSlider query={data} initDelay={4} transition={4} duration={8}>
+    <section aria-label="Homepage carousel" className="background-slider">
+      <BackgroundSlider
+        query={data} // direct path, no relative names
+        initDelay={4} // delay before the first transition
+        transition={4} // transition duration between images
+        duration={8} // how long an image is shown
+        images={[
+          // images to include (and their order) from 'relativePath'
+          'backgrounds/carousel-entry.jpg',
+          'backgrounds/carousel-table.jpg',
+          'backgrounds/carousel-front.jpg',
+          'backgrounds/carousel-kiosk.jpg',
+        ]}
+      >
         <SliderText />
         <SliderText />
         <SliderText />

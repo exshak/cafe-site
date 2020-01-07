@@ -9,7 +9,7 @@ const Footer = ({ siteTitle, siteAuthor }) => (
     <div className="container px-5 py-3">
       <div className="row">
         <div className="col-md-6 footer-copyright">
-          © {new Date().getFullYear()} {siteTitle} by {siteAuthor}
+          © {new Date().getFullYear()}, {siteTitle} by {siteAuthor}
         </div>
         <div className="col-md-6 footer-socials text-right">
           <SocialLinks />

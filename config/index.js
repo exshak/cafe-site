@@ -8,8 +8,8 @@ module.exports = {
   pathPrefix: '/',
   backgroundColor: '#f7f7f7',
   themeColor: '#efdbca',
-  favicon: 'src/assets/icons/logo.svg',
-  siteLogo: '',
+  favicon: 'src/assets/icons/favicon.png',
+  siteLogo: 'src/assets/icons/logo.png',
   siteNav: [
     { to: '/', text: 'Home' },
     { to: '/menu', text: 'Menu' },

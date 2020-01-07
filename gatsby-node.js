@@ -6,8 +6,8 @@ exports.createPages = async ({
   graphql,
   reporter,
 }) => {
-  const categoryTemplate = path.resolve('src/templates/category.js')
-  const productTemplate = path.resolve('src/templates/product.js')
+  const categoryTemplate = path.resolve('src/templates/category.jsx')
+  const productTemplate = path.resolve('src/templates/product.jsx')
 
   // Query for all categories and products
   const { data, errors } = await graphql(`

@@ -1,45 +1,43 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="">
+    <img alt="Gatsby" src="./src/assets/icons/logo.svg" width="300" />
   </a>
 </p>
 <h1 align="center">
-  Cafelina
+  <!-- Cafelina -->
 </h1>
 
-Cafelina
+Cafelina aims to provide a clean coffee shop experience with an extensive menu selection, order invoicing & checkout to your nearest store location.
 
 ## Features
 
--
+- Carousel & Gallery
+- Contentful CMS
+- Formspree & reCAPTCHA
+- Google Maps React
+- Snipcart Checkout
+- Netlify CD
+- PWA
+- SEO
 
 ## Quick Start
 
-Install dependencies
+Clone repository, install dependencies, start server
 
-```shell
-yarn
-```
-
-Start server
-
-```shell
-yarn start
-```
-
-Visit site
-
-```shell
-localhost:8000
+```sh
+git clone https://github.com/exshak/cafe-site.git
+cd cafe-site
+yarn               # npm install
+yarn start         # npm start
 ```
 
 ## Tech Stack
 
-- **React** : Frontend framework
-- **Gatsby** : SSG with GraphQL
-- **Bootstrap** : CSS, JS library
-- **Contentful** : CMS for data
-- **Cypress** : E2E testing
+- [React](https://reactjs.org)
+- [Gatsby](https://gatsbyjs.org)
+- [Bootstrap](https://getbootstrap.com)
+- [Contentful](https://contentful.com)
+- [Cypress](https://cypress.io)
 
 #### Folder Structure
 
@@ -53,4 +51,4 @@ src/
 
 ## License
 
-MIT
+[MIT](README.md)

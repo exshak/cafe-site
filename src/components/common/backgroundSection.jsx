@@ -7,6 +7,7 @@ import { SiteMetadata } from './siteMetadata'
 const BackgroundSection = ({ data, title, className }) => {
   const siteMetadata = SiteMetadata()
 
+  // CSS order positions matter, lowermost image comes last
   const imageData = [
     data.background.childImageSharp.fluid,
     `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`,
@@ -25,7 +26,10 @@ const BackgroundSection = ({ data, title, className }) => {
             </h5>
             {className === 'seasonal-image' && (
               <div className="my-5">
-                <Link to="/menu" className="font-weight-bold btn btn-light">
+                <Link
+                  to="/menu/special-menu"
+                  className="font-weight-bold btn btn-light"
+                >
                   Drinks
                 </Link>
               </div>

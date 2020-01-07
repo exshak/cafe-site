@@ -3,11 +3,12 @@ import Img from 'gatsby-image'
 import React, { useState } from 'react'
 import { FiGrid } from 'react-icons/fi'
 import { GiCakeSlice, GiCoffeeCup, GiSlicedBread } from 'react-icons/gi'
+import Button from '../common/button'
 
 const Gallery = () => {
-  const { all, cafe } = useStaticQuery(graphql`
+  const { all, cafe, baked, deserts } = useStaticQuery(graphql`
     query Gallery {
-      all: allFile(filter: { relativeDirectory: { eq: "backgrounds" } }) {
+      all: allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
         nodes {
           childImageSharp {
             fluid(quality: 80, maxWidth: 1920) {
@@ -16,7 +17,40 @@ const Gallery = () => {
           }
         }
       }
-      cafe: allFile(filter: { relativeDirectory: { eq: "images" } }) {
+      cafe: allFile(
+        filter: {
+          base: { regex: "/cafe/" }
+          relativeDirectory: { eq: "gallery" }
+        }
+      ) {
+        nodes {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      baked: allFile(
+        filter: {
+          base: { regex: "/baked/" }
+          relativeDirectory: { eq: "gallery" }
+        }
+      ) {
+        nodes {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      deserts: allFile(
+        filter: {
+          base: { regex: "/cafe/" }
+          relativeDirectory: { eq: "gallery" }
+        }
+      ) {
         nodes {
           childImageSharp {
             fluid(quality: 80, maxWidth: 1920) {
@@ -28,108 +62,59 @@ const Gallery = () => {
     }
   `)
 
-  const [gallery, setGallery] = useState(all)
+  const [galleryImages, setGalleryImages] = useState(all)
 
-  const variables = {
+  // Gallery images set to labels
+  const galleryData = {
     all,
     cafe,
+    baked,
+    deserts,
   }
 
   const handleChange = e => {
-    const directory = e.target.value
-    typeof directory === 'string' && setGallery(variables[directory])
+    const query = e.target.value
+    // Check to prevent svg value of null
+    typeof query === 'string' && setGalleryImages(galleryData[query])
   }
 
   return (
     <div className="container my-5">
-      <section id="gallery">
+      <section aria-label="Home Gallery" id="gallery">
         <div className="row">
           <div className="col-md-12 d-flex mb-5">
-            <div className="row text-center" style={{ display: 'contents' }}>
-              <div className="col d-flex justify-content-center">
-                <button
-                  type="button"
-                  value="all"
-                  onClick={handleChange}
-                  style={{
-                    backgroundColor: 'transparent',
-                    border: 0,
-                    outlineColor: 'transparent',
-                  }}
-                >
-                  <FiGrid
-                    style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
-                  />
-                  <br />
-                  All
-                </button>
-              </div>
-              <div className="col d-flex justify-content-center">
-                <button
-                  type="button"
-                  value="cafe"
-                  onClick={handleChange}
-                  style={{
-                    backgroundColor: 'transparent',
-                    border: 0,
-                    outlineColor: 'transparent',
-                  }}
-                >
-                  <GiCoffeeCup
-                    style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
-                  />
-                  <br />
-                  Cafe
-                </button>
-              </div>
-              <div className="col d-flex justify-content-center">
-                <button
-                  type="button"
-                  value="baked"
-                  onClick={handleChange}
-                  style={{
-                    backgroundColor: 'transparent',
-                    border: 0,
-                    outlineColor: 'transparent',
-                  }}
-                >
-                  <GiSlicedBread
-                    style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
-                  />
-                  <br />
-                  Baked
-                </button>
-              </div>
-              <div className="col d-flex justify-content-center">
-                <button
-                  type="button"
-                  value="deserts"
-                  onClick={handleChange}
-                  style={{
-                    backgroundColor: 'transparent',
-                    border: 0,
-                    outlineColor: 'transparent',
-                  }}
-                >
-                  <GiCakeSlice
-                    style={{ color: '#3a3a3a', height: '40px', width: '40px' }}
-                  />
-                  <br />
-                  Deserts
-                </button>
-              </div>
+            <div className="row text-center gallery-buttons">
+              <Button
+                label="all"
+                icon={<FiGrid />}
+                handleChange={handleChange}
+              />
+              <Button
+                label="cafe"
+                icon={<GiCoffeeCup />}
+                handleChange={handleChange}
+              />
+              <Button
+                label="baked"
+                icon={<GiSlicedBread />}
+                handleChange={handleChange}
+              />
+              <Button
+                label="deserts"
+                icon={<GiCakeSlice />}
+                handleChange={handleChange}
+              />
             </div>
           </div>
         </div>
         <div className="row mx-auto">
-          {gallery.nodes.map(({ childImageSharp: { fluid } }) => (
-            <figure key={fluid.src} className="col-md-4 my-3">
-              <a href={fluid.src}>
+          {galleryImages.nodes.map(({ childImageSharp: { fluid } }, key) => (
+            <figure key={key} className="col-md-4 my-3">
+              <a href={fluid.src} target="_blank" rel="noopener noreferrer">
                 <Img
                   fluid={fluid}
                   alt="picture"
-                  className="half-shadow"
-                  style={{ maxHeight: '190px' }}
+                  className="gallery-image half-shadow"
                 />
               </a>
             </figure>

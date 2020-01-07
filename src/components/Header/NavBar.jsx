@@ -30,13 +30,8 @@ const NavBar = ({ isCollapsed, toggleCollapse }) => {
       >
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0 font-weight-bold">
           {navigation.map((item, key) => (
-            <li className="nav-item">
-              <Link
-                key={key}
-                to={item.to}
-                className="nav-link"
-                activeClassName="active"
-              >
+            <li key={key} className="nav-item">
+              <Link to={item.to} className="nav-link" activeClassName="active">
                 {item.text}
               </Link>
             </li>
@@ -57,7 +52,7 @@ const NavBar = ({ isCollapsed, toggleCollapse }) => {
 }
 
 NavBar.propTypes = {
-  isCollapsed: PropTypes.func,
+  isCollapsed: PropTypes.bool,
   toggleCollapse: PropTypes.func,
 }
 

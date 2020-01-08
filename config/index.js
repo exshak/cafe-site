@@ -4,7 +4,7 @@ module.exports = {
   siteDescriptionLong: 'Coffee Shop & Bakery',
   siteShortName: 'Cafelina',
   siteAuthor: 'exshak',
-  siteUrl: '',
+  siteUrl: 'https://cafelina.netlify.com',
   pathPrefix: '/',
   backgroundColor: '#f7f7f7',
   themeColor: '#efdbca',

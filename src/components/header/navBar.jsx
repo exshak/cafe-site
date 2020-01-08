@@ -37,13 +37,15 @@ const NavBar = ({ isCollapsed, toggleCollapse }) => {
             </li>
           ))}
           <li className="nav-item">
-            <Link
-              to="/"
+            <a
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="nav-link snipcart-checkout"
               activeClassName="active"
             >
               <FaShoppingCart />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

@@ -1,9 +1,8 @@
 <p align="center">
-  <a href="">
-    <img alt="Gatsby" src="./src/assets/icons/logo.svg" width="300" />
+  <a href="https://cafelina.netlify.com">
+    <img src="./src/assets/icons/logo.svg" alt="Cafelina" width="300" />
   </a>
 </p>
-<!-- Cafelina -->
 
 <p align="center">
   <a href="https://github.com/exshak/cafe-site">
@@ -19,13 +18,15 @@
     <img src="https://img.shields.io/badge/tests-cypress-00cc99.svg" alt="tests: cypress" />
   </a>
   <a href="https://app.netlify.com/sites/cafelina/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/71c43047-2d8e-4fc3-9bee-ff1bc9b2986a/deploy-status" alt="Netlify Status" />
+    <img src="https://api.netlify.com/api/v1/badges/71c43047-2d8e-4fc3-9bee-ff1bc9b2986a/deploy-status" alt="netlify: status" />
   </a>
 </p>
 
 ---
 
 Cafelina aims to provide a clean coffee shop experience with an extensive menu selection, order invoicing & checkout to your nearest store location.
+
+_Have a great idea to contribute? Make a pull request, I'm always looking for ways to improve [Cafelina](https://cafelina.netlify.com)._
 
 ## Features
 
@@ -53,7 +54,7 @@ yarn build         # npm build
 
 Visit site at _`localhost:8000`_
 
-## Tech Stack
+## Built With
 
 - [React](https://reactjs.org)
 - [Gatsby](https://gatsbyjs.org)
@@ -65,14 +66,14 @@ Visit site at _`localhost:8000`_
 #### Folder Structure
 
 ```sh
-config            # Configuration
+config             # SEO manifest
 src/
 ├── assets        # Icons and images
 ├── components    # Javascript and css
-├── pages         # Site index and layout
+├── pages         # Site index and routes
 └── templates     # Product menu templates
 ```
 
 ## License
 
-[MIT](README.md)
+[MIT](./LICENSE)

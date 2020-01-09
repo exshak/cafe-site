@@ -29,7 +29,7 @@ export default ({ data }) => {
                 data-item-name={title}
                 data-item-price={price}
                 data-item-image={image.fixed.src}
-                data-item-url="https://cafelina.netlify.com/"
+                data-item-url="https://cafelina.netlify.com"
               >
                 {'$' + price}
               </button>

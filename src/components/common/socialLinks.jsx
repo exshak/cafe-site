@@ -10,7 +10,6 @@ const SocialLinks = () => {
       <li className="list-inline-item">
         <a
           href={social.twitter}
-          alt={social.twitter}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"
@@ -21,7 +20,6 @@ const SocialLinks = () => {
       <li className="list-inline-item">
         <a
           href={social.facebook}
-          alt={social.facebook}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"
@@ -32,7 +30,6 @@ const SocialLinks = () => {
       <li className="list-inline-item">
         <a
           href={social.instagram}
-          alt={social.instagram}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"

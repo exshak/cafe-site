@@ -107,6 +107,7 @@ nav {
 
 .gallery-image {
   max-height: 190px;
+  min-height: 100%;
 }
 
 /* Menu */

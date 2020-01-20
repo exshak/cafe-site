@@ -24,7 +24,7 @@
 
 ---
 
-Cafelina aims to provide a clean coffee shop experience with an extensive menu selection, order invoicing & checkout to your nearest store location.
+Cafelina is a Coffee Shop and Bakery website that displays menus and products from Contentful's CMS API using Gatsby and GraphQL. It provides a clean Coffee Shop experience through Bootstrap responsive design and order processing with the Snipcart checkout API.
 
 _Have a great idea to contribute? Make a pull request, I'm always looking for ways to improve [Cafelina](https://cafelina.netlify.com)._
 
@@ -34,7 +34,7 @@ _Have a great idea to contribute? Make a pull request, I'm always looking for wa
 - Contentful CMS
 - Formspree & reCAPTCHA
 - Google Maps React
-- Snipcart Checkout
+- Snipcart API
 - Netlify CD
 - PWA
 - SEO
@@ -66,11 +66,11 @@ Visit site at _`localhost:8000`_
 #### Folder Structure
 
 ```sh
-config             # SEO manifest
+config            # SEO manifest
 src/
 ├── assets        # Icons and images
 ├── components    # Javascript and css
-├── pages         # Site index and routes
+├── pages         # Site pages and routes
 └── templates     # Product menu templates
 ```
 

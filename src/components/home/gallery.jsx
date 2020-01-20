@@ -11,7 +11,7 @@ const Gallery = () => {
       all: allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
         nodes {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 1920) {
+            fluid(quality: 80, maxHeight: 190) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -25,7 +25,7 @@ const Gallery = () => {
       ) {
         nodes {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 1920) {
+            fluid(quality: 80, maxHeight: 190) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -39,7 +39,7 @@ const Gallery = () => {
       ) {
         nodes {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 1920) {
+            fluid(quality: 80, maxHeight: 190) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -53,7 +53,7 @@ const Gallery = () => {
       ) {
         nodes {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 1920) {
+            fluid(quality: 80, maxHeight: 190) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

@@ -9,6 +9,7 @@ const SocialLinks = () => {
     <ul className="list-inline list-unstyled">
       <li className="list-inline-item">
         <a
+          aria-label={social.twitter}
           href={social.twitter}
           target="_blank"
           rel="noopener noreferrer"
@@ -19,6 +20,7 @@ const SocialLinks = () => {
       </li>
       <li className="list-inline-item">
         <a
+          aria-label={social.facebook}
           href={social.facebook}
           target="_blank"
           rel="noopener noreferrer"
@@ -29,6 +31,7 @@ const SocialLinks = () => {
       </li>
       <li className="list-inline-item">
         <a
+          aria-label={social.instagram}
           href={social.instagram}
           target="_blank"
           rel="noopener noreferrer"

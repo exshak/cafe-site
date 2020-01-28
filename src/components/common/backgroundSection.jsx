@@ -10,7 +10,7 @@ const BackgroundSection = ({ data, title, className }) => {
   // CSS order positions matter, lowermost image comes last
   const imageData = [
     data.background.childImageSharp.fluid,
-    `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`,
+    `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))`,
   ].reverse()
 
   return (

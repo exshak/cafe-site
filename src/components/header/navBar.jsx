@@ -15,6 +15,7 @@ const NavBar = ({ isCollapsed, toggleCollapse }) => {
         <SiteLogo width={150} />
       </Link>
       <button
+        aria-label="Toggle NavBar"
         className="navbar-toggler"
         type="button"
         aria-expanded={isCollapsed}

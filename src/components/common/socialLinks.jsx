@@ -3,14 +3,16 @@ import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { SiteMetadata } from './siteMetadata'
 
 const SocialLinks = () => {
-  const { social } = SiteMetadata()
+  const {
+    social: { twitter, facebook, instagram },
+  } = SiteMetadata()
 
   return (
     <ul className="list-inline list-unstyled">
       <li className="list-inline-item">
         <a
-          aria-label={social.twitter}
-          href={social.twitter}
+          aria-label={`Visit ${twitter}`}
+          href={twitter}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"
@@ -20,8 +22,8 @@ const SocialLinks = () => {
       </li>
       <li className="list-inline-item">
         <a
-          aria-label={social.facebook}
-          href={social.facebook}
+          aria-label={`Visit ${facebook}`}
+          href={facebook}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"
@@ -31,8 +33,8 @@ const SocialLinks = () => {
       </li>
       <li className="list-inline-item">
         <a
-          aria-label={social.instagram}
-          href={social.instagram}
+          aria-label={`Visit ${instagram}`}
+          href={instagram}
           target="_blank"
           rel="noopener noreferrer"
           className="list-social p-2"

@@ -48,7 +48,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="preconnect" href="https://cdn.snipcart.com" crossorigin />
+      <link rel="dns-prefetch" href="https://cdn.snipcart.com" />
+    </Helmet>
   )
 }
 

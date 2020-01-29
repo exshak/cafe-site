@@ -39,6 +39,7 @@ const NavBar = ({ isCollapsed, toggleCollapse }) => {
           ))}
           <li className="nav-item">
             <a
+              aria-label="Toggle Cart"
               href="/"
               target="_blank"
               rel="noopener noreferrer"
